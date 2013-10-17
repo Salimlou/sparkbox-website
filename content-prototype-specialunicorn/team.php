@@ -27,36 +27,45 @@
   <p>The only real thing we have to offer is us. It's not what we do &mdash; it's how we do it.</p>
   <!--I'd like to see us include links to blog articles concerning each of these principles.  -->
     <dl>
-    <dt>Prioritize People</dt>
+    <dt>Prioritize People:</dt>
       <dd>Work hard by ultimately working for community, family, and faith.</dd>
-    <dt>Never Stop Learning</dt>
+    <dt>Never Stop Learning:</dt>
       <dd>Mastery is an ever-changing target, but we pursue it with a daily hunger.</dd>
-    <dt>Collaborate Constantly</dt>
+    <dt>Collaborate Constantly:</dt>
       <dd>Band together across disciplines, client and teammate alike, for richer solutions.</dd>
-    <dt>Lead By Example</dt>
+    <dt>Lead By Example:</dt>
       <dd>Raising the bar for oneself benefits every project and person then touched.</dd>
-    <dt>Do What You Love</dt>
+    <dt>Do What You Love:</dt>
       <dd>Passion is infectious, and it produces a joy that spreads to work and team.</dd>
   </dl>
-  <p>What does a team like this look like? <a href="team.php">See for yourself.</a></p>
 </section>
 
 
 <section>
   <h2>Meet our team of web freedom fighters.</h2>
   <p>We&rsquo;re smart. We&rsquo;re hard-working. We&rsquo;re easy to talk to, and we love a challenge.</p>
-  <?php include("team-nav.php") ?>
-<section class="statistics">
-  <img src="" alt="Average Oreos Eaten Per Week: per person and office total." />
-  <img src="" alt="Reigning Pool Champion: single person." />
-  <img src="" alt="Favorite Beer: pie chart?" />
-  <img src="" alt="Top Three Tweeters this month: list top three with their numbers and maybe their most recent tweet." />
-  <img src="" alt="Fav Sparkbox Friday Lunch: pie chart?" />
-  <img src="" alt="Latest to take a nerf dart in the eye: single person" />
-  <img src="" alt="Total number of Sparkbox kids so far: amount of kids (just team total)" />
-  <img src="" alt="Cumulative years of Sparkbox experience: running sum of years, month, days, hours, seconds that all team members have been on staff." />
-    <img src="" alt="Cumulative years of professional experience: running sum of years, month, days, hours, seconds that all team members have been on staff." />
-</section>
+  <!--Display team member names with links to their individual team-member.php page (include pictures?)-->
+  <ol >
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Adam</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ben</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Dom</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Drew</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Emily</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ethan</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">J&auml;n</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy</a></li>    
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy</a></li>    
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jody</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Marshall</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Mike</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Neil</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Patrick</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Philip</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ryann</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="apprenticeships-and-internships.php">You?</a></li>
+  </ol>
 
 <!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
 
