@@ -32,7 +32,7 @@
     <h2>Web Developer</h2>
     <ul>
       <li><a href="#">Twitter</a></li>
-      <li><a href="#">Github</a></li>
+      <li><a href="#">GitHub</a></li>
       <li><a href="#">Dribbble</a></li>
     </ul>
     <p>I&rsquo;d like to do a short paragraph bio about each person... possibly in conjunction with an image of our "stuff". If we have the stuff, I like the idea of it being on top of the image, toggling back and forth transparency to hide/show the text versus the image so this page doesn't get super long</p>
@@ -45,7 +45,7 @@
   </article>
   
   <article>
-    <h1>Meet Ethan Next at: <a href="#">All Ethan's Events</a></h1>
+    <h1>Meet Ethan Next at: <a href="#">All Ethan's Events (on Lanyrd)</a></h1>
     <h2><a href="http://seesparkbox.com/foundry/build_guild10">Build Guild</a></h2>
     <h3>Dayton, OH</h3>
     <time>November 13</time>

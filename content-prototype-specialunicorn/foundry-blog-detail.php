@@ -66,6 +66,7 @@
   </section>
 
   <section class="Conversation">
+  	We're dropping this feature, right?
     <h3>Conversation about this article</h3>
     <p>user image | Username with link | Time</br>
     This is a Tweet about this story</p> 

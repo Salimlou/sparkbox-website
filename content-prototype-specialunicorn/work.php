@@ -16,7 +16,7 @@
   <section>	
     <h1>Work</h1>
     <h2>Behavior of this page:</h2>
-    <p>Items on this page are listed with most recent at the top-left, oldest at bottom-right. We can not handle this as we are on the current site. For example, the first and second most recent items are currently in the left-hand column on top of one another</p>
+    <p>Items on this page will appear similarly to the other Foundry listing pages. We can not handle this as we are on the current site. For example, the first and second most recent items are currently in the left-hand column on top of one another</p>
   </section>
   
   <section>	
@@ -36,7 +36,7 @@
       <li>Information Architecture</li>
       <li>Content Strategy</li>
       <li>Design</li>
-      <li>Front End Development</li>
+      <li>Front-end Development</li>
       <li>CMS Integration</li>
       <li>CMS Extension</li>
       <li>Web App Development</li>
@@ -55,7 +55,7 @@
       <dt>Client Quote(s)</dt>
         <dd>HTML text field</dd>
       <dt>Additional Image(s) w/ Supporting Long Caption</dt>
-        <dd>An image that wouldn't be in the carrousel of main images, but instead would be used to illustrate a textual point (caption) further down the page. (Example: picture of the university we worked for with a blurb about them).</dd>
+        <dd>An image that wouldn't be in the carousel of main images, but instead would be used to illustrate a textual point (caption) further down the page. (Example: picture of the university we worked for with a blurb about them).</dd>
     </dl>
     
   </section>

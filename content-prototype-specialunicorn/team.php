@@ -28,22 +28,22 @@
   <!--I'd like to see us include links to blog articles concerning each of these principles.  -->
     <dl>
     <dt>Prioritize People:</dt>
-      <dd>Work hard by ultimately working for community, family, and faith.</dd>
+      <dd>work hard by ultimately working for community, family, and faith.</dd>
     <dt>Never Stop Learning:</dt>
-      <dd>Mastery is an ever-changing target, but we pursue it with a daily hunger.</dd>
+      <dd>mastery is an ever-changing target, but we pursue it with a daily hunger.</dd>
     <dt>Collaborate Constantly:</dt>
-      <dd>Band together across disciplines, client and teammate alike, for richer solutions.</dd>
+      <dd>band together across disciplines, client and teammate alike, for richer solutions.</dd>
     <dt>Lead By Example:</dt>
-      <dd>Raising the bar for oneself benefits every project and person then touched.</dd>
+      <dd>raising the bar for oneself benefits every project and person then touched.</dd>
     <dt>Do What You Love:</dt>
-      <dd>Passion is infectious, and it produces a joy that spreads to work and team.</dd>
+      <dd>passion is infectious, and it produces a joy that spreads to work and team.</dd>
   </dl>
 </section>
 
 
 <section>
   <h2>Meet our team of web freedom fighters.</h2>
-  <p>We&rsquo;re smart. We&rsquo;re hard-working. We&rsquo;re easy to talk to, and we love a challenge.</p>
+  <p>We&rsquo;re smart. We&rsquo;re hard-working. We&rsquo;re easy to talk to. And we love a challenge.</p>
   <!--Display team member names with links to their individual team-member.php page (include pictures?)-->
   <ol >
     <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Adam</a></li>
