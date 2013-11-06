@@ -1,0 +1,10 @@
+title: Sparkbox
+subtitle: Table of Contents
+
+sparkbox-pages:
+  - page-title: "Homepage"
+    page-link: "home.html"
+  - page-title: "Foundry Entry"
+    page-link: "foundry-entry.html"
+  - page-title: "Foundry Listing"
+    page-link: "home.html"
