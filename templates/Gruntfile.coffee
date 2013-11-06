@@ -68,12 +68,16 @@ module.exports = (grunt) ->
 
     assemble:
       options:
-        partials: "partials/*"
-        pkg: '<%= pkg %>'
-        data: "data/*.yml"
+        partials: "partials/*.hbs"
+        data: "data/common/*.yml"
       index:
+        options:
+          data: "data/index/*.yml"
         src: "partials/index.hbs"
         dest: "dist/index.html"
+      foundry_entry:
+        src: "partials/foundry-entry.hbs"
+        dest: "dist/foundry-entry.html"
 
     concat:
       js:

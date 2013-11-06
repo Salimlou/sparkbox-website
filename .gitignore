@@ -1,1 +1,5 @@
+.DS_Store
 *.esproj
+*.scssc
+templates/dist/
+templates/reports/
