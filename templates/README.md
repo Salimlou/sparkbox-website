@@ -15,13 +15,9 @@ To get started:
 2. Type ```npm install``` and ```bundle``` in the root of the project directory.
 3. Change the Project Name in ```package.json```
 4. Run ```grunt watch```
-5. ![Science](https://gimmebar-assets.s3.amazonaws.com/4fafbdce48c48.jpg)
 
 **Your project will compile to ```dist/```**
 
-## To-Do
-* Add minify
-* Source maps for minify
-* Add concat only on dist
-* Add livereload
-* Add bash script for easy install
+## Font Notice
+
+Due to copyright issues and the public nature of this repo, some font files are intentionally missing. Sparkboxers working on this project can get the fonts from the shared project folder.
