@@ -129,11 +129,11 @@
   background-repeat: no-repeat;
 }
 .svg .build-header .sb-logo { /* small logo - svg */
-  background-image: url(/i/sb-logo.svg);
+  background-image: url(../i/sb-logo.svg);
 }
 .no-svg .build-header .sb-logo,
 .no-js .build-header .sb-logo { /* small logo - png */
-  background-image: url(/i/sb-logo-small.png);
+  background-image: url(../i/sb-logo-small.png);
 }
 
 .build-header .explanation {
@@ -220,7 +220,7 @@
   margin-left: 1em;
   width: 20px;
   height: 17px;
-  background-image: url(/i/external-arrow.png);
+  background-image: url(../i/external-arrow.png);
   background-repeat: no-repeat;
   content: "\0000a0";
 }
@@ -265,7 +265,7 @@
 
   .no-svg .build-header .sb-logo,
   .no-js .build-header .sb-logo { /* large logo, mq support - png */
-    background-image: url(/i/sb-logo.png);
+    background-image: url(../i/sb-logo.png);
   }
 
   .build-header .posts, .build-header .deliverables {
@@ -297,7 +297,7 @@
   margin-top: -67px;
   width: 123px;
   height: 136px;
-  background-image: url(/i/sb-logo.png);
+  background-image: url(../i/sb-logo.png);
   background-repeat: no-repeat;
 }
 
