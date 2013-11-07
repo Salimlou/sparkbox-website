@@ -22,7 +22,11 @@
 // }
 
 %font-primary {
-  font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+}
+
+%font-body {
+  font-family: Adelle, "Times New Roman", serif;
 }
 
 %hide-text {
