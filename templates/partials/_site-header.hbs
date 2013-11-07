@@ -1,0 +1,33 @@
+<header class="site-header">
+  <h1 class="logo">
+    <a href="/" class="logo-link">
+      <span class="logo-icon" aria-hidden="true" data-icon="&#xe001;"></span>
+      <span class="logo-text">Sparkbox</span>
+    </a>
+  </h1>
+  <nav class="site-nav" id="nav">
+    <a class="nav-button" href="#nav">
+      <span class="menu-icon" aria-hidden="true" data-icon="&#xe002;"></span>
+      <span class="menu-text">Menu</span>
+    </a>
+    <ol class="nav-list">
+      <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Belief</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Foundry</a></li>
+    </ol>
+  </nav>
+</header>
+{{#if page-data.foundry}}
+  <div class="foundryArticle-displayOptions">
+    <ul class="foundryArticle-list">
+      <li class="displayOptions-item">
+        <a class="displayOptions-link displayOptions-selectedLink displayOptionsLink-FullArticle" href="">Full Article</a>
+      </li>
+      <li class="displayOptions-item">
+        <a class="displayOptions-link displayOptionsLink-QuickRead" href="">Quick Read</a>
+      </li>
+    </ul>
+  </div>
+{{/if}}
+<main class="site-main">

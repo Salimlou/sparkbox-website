@@ -1,0 +1,29 @@
+@import "compass";
+
+html {
+  @include background(linear-gradient(top,#f4f4f4,#d0d0d0) repeat-x);
+  @include background-size(100% 100%);
+  font-family: sans-serif;
+  color: #444;
+  height: 100%;
+}
+
+body {
+  margin: 2em;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 1.25em 0;
+  padding: 0;
+}
+
+li {
+  margin:0 0 1em;
+  font-size: 1.25em;
+}
