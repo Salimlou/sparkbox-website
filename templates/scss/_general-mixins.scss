@@ -40,3 +40,20 @@
     }
   }
 }
+
+@mixin inline($val) {
+  display: inline-block;
+  vertical-align: $val;
+  .lt-ie8 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

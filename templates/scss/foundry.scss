@@ -1,0 +1,113 @@
+.foundryArticle-displayOptions {
+  background-color: $c-bg-articleOptions;
+}
+
+.foundryArticle-list {
+  @extend %remove-list-styles;
+  display:table;
+  width: 100%;
+  max-width: 64em;
+  @include sb-media(45em) {
+    margin: 0 auto;
+    display: block;
+    padding-left: 25%
+  }
+}
+
+.displayOptions-item {
+  vertical-align: middle;
+  width:50%;
+  display: table-cell;
+  padding: 1em .5em 1.5em;
+  @include sb-media(45em) {
+    @include inline(top);
+    width: auto;
+  }
+}
+
+.displayOptions-link {
+  @extend %font-primary;
+  color: $c-tx-articleOptions;
+  font-size: 1.1875em;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: .5em .75em;
+  position: relative;
+  @include sb-media(45em) {
+    padding: .5em 1.125em;
+  }
+}
+
+.displayOptions-selectedLink {
+  background-color: $c-bg-articleOptionSelected;
+  @include sb-media(45em) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 45%;
+      @include transform(rotate(45deg));
+      width: .875em;
+      height: .875em;
+      background-color: $c-bg-articleOptionSelected;
+    }
+  }
+}
+
+/////////////////////////////////////////////
+
+.foundryArticle-header {
+  position: relative;
+  @include clearfix;
+}
+
+.foundryArticle-title {
+  @include sb-media(25em) {
+    font-size: 2.25em;
+  }
+  @include sb-media(45em) {
+    font-size: 2.875em;
+    float: left;
+    margin-left: 25%;
+    margin-bottom: 0;
+    width: 75%;
+  }
+  @include sb-media(60em) {
+    font-size: 3.25em;
+  }
+}
+
+.foundryArticle-meta {
+  @include sb-media(45em) {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+  }
+}
+
+.foundryArticle-metaItem {
+  @extend %font-primary;
+  margin: 0;
+  color: $c-tx-articleMeta;
+  font-size: .75em;
+  font-weight: 700;
+  letter-spacing: .125em;
+  text-transform: uppercase;
+}
+
+.foundryArticle-metaLink {
+  color: $c-tx-articleMeta;
+}
+
+.foundryArticle-intro {
+  font-size: 1.25em;
+}
+
+.foundryArticle-content {
+  clear: both;
+  @include sb-media(45em) {
+    padding-left:25%;
+  }
+}

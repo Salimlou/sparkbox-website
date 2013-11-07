@@ -20,3 +20,19 @@
 //   color: gray;
 //   background: darkgray;
 // }
+
+%font-primary {
+  font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+}
+
+%hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%remove-list-styles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

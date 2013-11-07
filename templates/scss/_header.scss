@@ -1,4 +1,123 @@
 .site-header {
   background: $c-bg-mainHeader;
   color: white;
+  @include clearfix;
+}
+
+.logo {
+  font-size: 100%;
+  margin: 0;
+  font-weight: normal;
+  float: left;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  display: table;
+}
+
+.logo-icon {
+  background: $c-bg-logoBlock;
+  display: table-cell;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  text-align: center;
+  &:before {
+    color: $c-tx-logoColor;
+    font-size: 2.375em;
+    @include sb-media(36em) {
+      font-size: 3.125em;
+    }
+  }
+  @include sb-media(36em) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.logo-text {
+  background: url("images/sparkbox.svg") no-repeat center center;
+  color:rgba(#000,0);
+  display: table-cell;
+  height: 60px;
+  width: 140px;
+  @include background-size(90px 21px);
+  vertical-align: middle;
+  font-size: 1.6875em;
+  text-align: center;
+  position: relative;
+  @include sb-media(36em) {
+    height: 80px;
+    width: 180px;
+    @include background-size(auto auto);
+  }
+}
+
+.site-nav {
+  display: table;
+  float:right;
+  height: 60px;
+  @include sb-media(36em) {
+    height: 80px;
+  }
+}
+.nav-button {
+  text-decoration: none;
+  display: table;
+  height: 60px;
+  &:hover {
+    background: lighten($c-bg-mainHeader,10%);
+  }
+  &:active {
+    background: darken($c-bg-mainHeader,10%);
+  }
+  @include sb-media(36em) {
+    display: none;
+  }
+}
+
+.menu-icon {
+  display: table-cell;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  vertical-align: middle;
+  &:before {
+    font-size: 1.375em;
+  }
+}
+
+.menu-text {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  @include sb-media(36em) {
+    display: table;
+    height: 80px;
+  }
+}
+
+.nav-item {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.nav-link {
+  @extend %font-primary;
+  display: block;
+  padding: .5em .75em;
+  color: white;
+  font-size: .8125em;
+  font-weight: 700;
+  letter-spacing: .125em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
