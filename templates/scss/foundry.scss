@@ -1,5 +1,5 @@
 .foundryArticle-displayOptions {
-  background-color: $c-bg-articleOptions;
+  background-color: $c-articleBackground;
 }
 
 .foundryArticle-list {
@@ -40,8 +40,9 @@
   }
 }
 
+.displayOptions-link:hover,
 .displayOptions-selectedLink {
-  background-color: $c-bg-articleOptionSelected;
+  background-color: $c-articleBackground-selected;
   @include sb-media(45em) {
     &:after {
       content: '';
@@ -51,7 +52,7 @@
       @include transform(rotate(45deg));
       width: .875em;
       height: .875em;
-      background-color: $c-bg-articleOptionSelected;
+      background-color: $c-articleBackground-selected;
     }
   }
 }
