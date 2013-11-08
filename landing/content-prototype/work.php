@@ -13,19 +13,19 @@
 <?php include("navigation.php") ?>
   </header>
 
-  <section>	
+  <section> 
     <h1>Work</h1>
     <h2>Behavior of this page:</h2>
     <p>Items on this page will appear similarly to the other Foundry listing pages. We can not handle this as we are on the current site. For example, the first and second most recent items are currently in the left-hand column on top of one another</p>
   </section>
   
-  <section>	
+  <section> 
     <h1>Fields for each work entry:</h1>
     
     <h2>Required</h2>
     <ul>
       <li>Project Title</li>
-      <li>Client (clickable to show other projects for this client)</li>
+      <li>Client (clickable to show other projects for this client. similar to how we handle author on blog posts.)</li>
       <li>Featured Image (for use on homepage only)</li>
       <li>Project Short Description (1-2 paragraphs)</li>
     </ul>
@@ -36,7 +36,7 @@
       <li>Information Architecture</li>
       <li>Content Strategy</li>
       <li>Design</li>
-      <li>Front-end Development</li>
+      <li>Frontend Development</li>
       <li>CMS Integration</li>
       <li>CMS Extension</li>
       <li>Web App Development</li>
@@ -46,7 +46,7 @@
     </ul>
     
     <h2>Potential Attributes</h2>
-    <p>Projects could have multiples of each/any of the below:</p>		
+    <p>Projects could have multiples of each/any of the below:</p>    
     <dl>
       <dt>Main Image(s)</dt>
         <dd>Most commonly a screenshot of the project... that screenshot is placed on an image of the originating device (so we will have PSD's of devices to put our screenshots on). However, the main image could also be a sketch, wireframe, plan, brand piece, etc.</dd>
@@ -62,7 +62,7 @@
   
 
 
-<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
 <?php include("footer.php") ?>
 

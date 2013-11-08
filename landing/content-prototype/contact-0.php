@@ -21,7 +21,7 @@
   </section>
 
 
-    <!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+    <!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
     <?php include("footer.php") ?>
 

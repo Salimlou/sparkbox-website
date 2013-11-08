@@ -67,7 +67,7 @@
     <li><a title="Link reveals person's information (hiding team overview)." href="apprenticeships-and-internships.php">You?</a></li>
   </ol>
 
-<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
 <?php include("footer.php") ?>
 

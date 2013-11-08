@@ -19,7 +19,7 @@
   <h1>Devoted To a Web Built Right</h1>
   <h2>Meet our team of web freedom fighters.</h2>
   <p>We&rsquo;re smart. We&rsquo;re hard-working. We&rsquo;re easy to talk to, and we love a challenge.</p>
-  <?php include("team-nav.php") ?>		
+  <?php include("team-nav.php") ?>    
 </section>
 
 <!--Detail section would contain overall team fun "statistics." This section could also be used to reveal a team member's details like we do on current site (unless we decided to make a page for this).-->
@@ -40,7 +40,7 @@
   
 </section>
 
-<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
 <?php include("footer.php") ?>
 
