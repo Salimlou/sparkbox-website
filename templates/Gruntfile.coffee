@@ -70,6 +70,7 @@ module.exports = (grunt) ->
       options:
         partials: "partials/*.hbs"
         data: "data/common/*.yml"
+        pkg: "<%= pkg %>"
       index:
         options:
           data: "data/index/*.yml"
