@@ -7,10 +7,10 @@ $c-tx-logoColor: #1A1918;
 
 $c-anchorLink: #3EA9BE;
 $c-anchorLink-hover: lighten($c-anchorLink,10%);
-$c-anchorLink-visited: darken($c-anchorLink,20%); // #1C4C54
+$c-anchorLink-visited: darken($c-anchorLink,20%);
 
-$c-bg-articleOptions: #D5F2F7; // also rgba(#3EA9BE,.12)
-$c-bg-articleOptionSelected: #A3DAE3; // also rgba(#3EA9BE,.33)
+$c-articleBackground: #D5F2F7; // also rgba(#3EA9BE,.12)
+$c-articleBackground-selected: #A3DAE3;
 
 $c-tx-articleOptions: #1C4C54;
 
