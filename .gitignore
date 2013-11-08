@@ -16,32 +16,5 @@ specs/js/*
 reports/*
 reports/**/
 
-
 # We don't want to check in packages
 node_modules/*
-
-.DS_Store
-
-templates/public/css/fonts/152fa65e-e42f-431d-a37f-a66d10903310.ttf
-
-templates/public/css/fonts/39e32aa7-13e2-40ab-ac9c-ea669789b9d6.ttf
-
-templates/public/css/fonts/4a93e3f0-a4a0-48bb-a0ac-56b7d14dc1a2.svg
-
-templates/public/css/fonts/4c639ff3-732a-4d7a-b793-b83771f8e94c.svg
-
-templates/public/css/fonts/6ad1d18a-0166-4178-812f-07e16b64000b.svg
-
-templates/public/css/fonts/6fb51c51-e183-4721-9e37-45a2ba8a5641.eot
-
-templates/public/css/fonts/747b7cce-295f-4e39-903b-5858af155c13.woff
-
-templates/public/css/fonts/89fe91e2-46a0-4e3b-8735-78b3de8da38f.woff
-
-templates/public/css/fonts/9ddb7916-058a-4e43-9880-dcb237ef42b6.woff
-
-templates/public/css/fonts/d1367539-252f-43f2-b898-5585bcee553d.ttf
-
-templates/public/css/fonts/e800d24d-133b-4293-a15b-611f67139c09.eot
-
-templates/public/css/fonts/498b62bf-272a-424f-8438-963e84290a7b.eot
