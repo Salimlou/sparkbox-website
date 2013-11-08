@@ -1,0 +1,9 @@
+navigation:
+  - navItemTitle: "Team"
+    navItemSelected:
+  - navItemTitle: "Belief"
+    navItemSelected:
+  - navItemTitle: "Work"
+    navItemSelected:
+  - navItemTitle: "Foundry"
+    navItemSelected: true
