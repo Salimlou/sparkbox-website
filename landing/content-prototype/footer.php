@@ -6,5 +6,5 @@
   
   <?php include("navigation.php") ?>
   
-  <p>Copyright Sparkbox 2011-<?php echo date("Y"); ?>. All rights reserved.</p>
+  <p>Copyright Sparkbox 2013-<?php echo date("Y"); ?>. All rights reserved.</p>
 </footer>
