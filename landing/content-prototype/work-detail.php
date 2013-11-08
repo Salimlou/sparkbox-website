@@ -15,7 +15,7 @@
 
   <section> 
     <h1>Once A Month Meals Responsive Web Design and Application</h1>
-    <p> Once A Month Meals (clickable to show other projects for this client. similar to how we handle author on blog posts.)</p>
+    <p><a href="work-detail.php">Once A Month Meals</a> (clickable to show other projects for this client. similar to how we handle author on blog posts.)</p>
   </section>
   
   <section>

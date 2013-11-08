@@ -31,7 +31,7 @@
 </article>
 
 <article>
-    <h2><a href="work-detail.php">OOnce A Month Meals Responsive Web Design and Application</a></h2>
+    <h2><a href="work-detail.php">Once A Month Meals Responsive Web Design and Application</a></h2>
     <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
 
