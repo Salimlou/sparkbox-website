@@ -1,14 +1,5 @@
 @import "reset";
 @import "mixins";
-@import "extends";
 @import "smallest";
 
 @import "build-header"; // Heads up: build-header has self-contained media queries
-
-// @media (min-width: 0px) {
-//   @import "min-width-000";
-// }
-
-// @media (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
-//   @import "2x";
-// }
