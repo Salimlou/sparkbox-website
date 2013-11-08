@@ -18,3 +18,4 @@ reports/**/
 
 # We don't want to check in packages
 node_modules/*
+*.ttf

@@ -3,7 +3,7 @@
 html {
   @include background(linear-gradient(top,#f4f4f4,#d0d0d0) repeat-x);
   @include background-size(100% 100%);
-  font-family: sans-serif;
+  font-family: "Avenir Next", sans-serif;
   color: #444;
   height: 100%;
 }
@@ -13,8 +13,8 @@ body {
 }
 
 h1, h2 {
-  font-weight: normal;
   margin: 0;
+  text-transform: uppercase;
 }
 
 ul {
