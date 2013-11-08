@@ -46,28 +46,29 @@
   <p>We&rsquo;re smart. We&rsquo;re hard-working. We&rsquo;re easy to talk to. And we love a challenge.</p>
   <!--Display team member names with links to their individual team-member.php page (include pictures?)-->
   <ol >
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Adam</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ben</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Dom</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Drew</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Emily</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ethan</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">J&auml;n</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy</a></li>    
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy</a></li>    
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jody</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Marshall</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Mike</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Neil</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Patrick</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Philip</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob</a></li>
-    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ryann</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Adam - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ben - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Dom - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Drew - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Emily - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ethan - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">J&auml;n - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy - Title</a></li>    
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jeremy - Title</a></li>    
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Jody - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Marshall - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Mike - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Neil - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Patrick - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Philip - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Rob - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ryann - Title</a></li>
+    <li><a title="Link reveals person's information (hiding team overview)." href="team-member.php">Ryan - Title</a></li>
     <li><a title="Link reveals person's information (hiding team overview)." href="apprenticeships-and-internships.php">You?</a></li>
   </ol>
 
-<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
 <?php include("footer.php") ?>
 

@@ -13,56 +13,38 @@
 <?php include("navigation.php") ?>
   </header>
 
-  <section>	
+  <section> 
     <h1>Work</h1>
-    <h2>Behavior of this page:</h2>
-    <p>Items on this page will appear similarly to the other Foundry listing pages. We can not handle this as we are on the current site. For example, the first and second most recent items are currently in the left-hand column on top of one another</p>
   </section>
   
-  <section>	
-    <h1>Fields for each work entry:</h1>
-    
-    <h2>Required</h2>
-    <ul>
-      <li>Project Title</li>
-      <li>Client (clickable to show other projects for this client)</li>
-      <li>Featured Image (for use on homepage only)</li>
-      <li>Project Short Description (1-2 paragraphs)</li>
-    </ul>
-    
-    <h2>Discipline Categories</h2>
-    <ul>
-      <li>Planning</li>
-      <li>Information Architecture</li>
-      <li>Content Strategy</li>
-      <li>Design</li>
-      <li>Front-end Development</li>
-      <li>CMS Integration</li>
-      <li>CMS Extension</li>
-      <li>Web App Development</li>
-      <li>Consulting</li>
-      <li>Training</li>
-      <li>Project Management</li>
-    </ul>
-    
-    <h2>Potential Attributes</h2>
-    <p>Projects could have multiples of each/any of the below:</p>		
-    <dl>
-      <dt>Main Image(s)</dt>
-        <dd>Most commonly a screenshot of the project... that screenshot is placed on an image of the originating device (so we will have PSD's of devices to put our screenshots on). However, the main image could also be a sketch, wireframe, plan, brand piece, etc.</dd>
-      <dt>Project Statistic(s)</dt>
-        <dd>HTML text field allowing us to call out statistics or project successes in text form. (Example: Increased Enrollment 25%)</dd>
-      <dt>Client Quote(s)</dt>
-        <dd>HTML text field</dd>
-      <dt>Additional Image(s) w/ Supporting Long Caption</dt>
-        <dd>An image that wouldn't be in the carousel of main images, but instead would be used to illustrate a textual point (caption) further down the page. (Example: picture of the university we worked for with a blurb about them).</dd>
-    </dl>
+  <section> 
+    <p>Page Behavior: Items on this page will appear similarly to the other Foundry listing pages</p>
+
+<article>
+    <h2><a href="work-detail.php">Project Title</a></li> (this or the entire element needs to be obviously clickable or we'll need a separate "Read About the Project" link)</h2>
+    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
+
+<article>
+    <h2><a href="work-detail.php">Awesome Client Web Application</a></h2>
+    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
+
+<article>
+    <h2><a href="work-detail.php">OOnce A Month Meals Responsive Web Design and Application</a></h2>
+    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
+
+ <article>
+    <h2><a href="work-detail.php">DPL Energy Responsive Web Design</a></h2>
+    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
     
   </section>
   
 
 
-<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.	-->
+<!--Footer featured some of our past clients' logos, but we only show logos for clients for whom we have work in our work section.  -->
 
 <?php include("footer.php") ?>
 
