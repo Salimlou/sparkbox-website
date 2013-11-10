@@ -82,6 +82,18 @@ module.exports = (grunt) ->
         #put it in dist/
         dest: "dist/js/<%= pkg.name %>.js"
 
+    sg:
+      default_options:
+        options:
+          css:  'scss'
+          data: 'data'
+          html: 'partials'
+          dest: 'dist/styleguide'
+          project_css: 'mq-base'
+          syntax: 'tomorrow-night'
+          logo: '/img/styleguide-sb-logo.jpg'
+          js: ["/js/Sparkbox.js"]
+
     modernizr:
       devFile: "dist/js/modernizr.js"
       outputFile: "dist/js/modernizr.js"
@@ -165,6 +177,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-imageoptim"
   grunt.loadNpmTasks "assemble"
+  grunt.loadNpmTasks "grunt-sg"
 
   # NOTE: this has to wipe out everything
   grunt.registerTask "root-canal", [ "clean:all", "copy:main", "copy:img"]
@@ -177,7 +190,7 @@ module.exports = (grunt) ->
   grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "modernizr", "jasmine", "cucumberjs" ]
 
   # Production task
-  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "watch"]
+  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "watch"]
 
   grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble" ]
 
