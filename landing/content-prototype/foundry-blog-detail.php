@@ -65,17 +65,6 @@
     <p><a href="foundry-blog-detail.php">All Articles by Jeremy Loyd (author)</a>   
   </section>
 
-  <section class="Conversation">
-  	We're dropping this feature, right?
-    <h3>Conversation about this article</h3>
-    <p>user image | Username with link | Time</br>
-    This is a Tweet about this story</p> 
-    <p>user image | Username with link | Time</br>
-    This is a Tweet about this story</p> 
-    <p>user image | Username with link | Time</br>
-    This is a Tweet about this story</p> 
-  </section>
-
 		<p><a href="foundry-blog.php">All Blog Posts</a></p>
 
 

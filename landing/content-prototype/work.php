@@ -18,7 +18,6 @@
   </section>
   
   <section> 
-    <p>Page Behavior: Items on this page will appear similarly to the other Foundry listing pages</p>
 
 <article>
     <h2><a href="work-detail.php">Project Title</a></li> (this or the entire element needs to be obviously clickable or we'll need a separate "Read About the Project" link)</h2>
@@ -31,7 +30,7 @@
 </article>
 
 <article>
-    <h2><a href="work-detail.php">OOnce A Month Meals Responsive Web Design and Application</a></h2>
+    <h2><a href="work-detail.php">Once A Month Meals Responsive Web Design and Application</a></h2>
     <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
 
