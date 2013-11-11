@@ -2,12 +2,20 @@
 // Keep in mind that these can act unexpectedly in media queries, so only use
 // extends on things that won't be changing in media queries.
 
+
+// font stacks
 %font-primary {
   font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 
 %font-body {
   font-family: Adelle, "Times New Roman", serif;
+}
+
+// toolbox styles
+
+%clearfix {
+  @include clearfix;
 }
 
 %hide-text {
@@ -20,4 +28,31 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+%is-visuallyhidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+%ir {
+  // replace text with a background image:
+  // in addition to extending,
+  // requires height, width, and background image
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; // IE 6/7 fallback
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
 }
