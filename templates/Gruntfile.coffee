@@ -75,6 +75,11 @@ module.exports = (grunt) ->
           data: "data/foundry-entry/*.yml"
         src: "partials/foundry-entry.hbs"
         dest: "dist/foundry-entry.html"
+      team:
+        options:
+          data: "data/team/*.yml"
+        src: "partials/team.hbs"
+        dest: "dist/team.html"
 
     concat:
       js:
