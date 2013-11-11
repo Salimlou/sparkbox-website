@@ -10,3 +10,29 @@ hero:
       <li>Lead By Example</li>
       <li>Do What You Love</li>
     </ul>
+
+page-intro:
+  title: Meet Our Team of Web Freedom Fighters
+  subtitle: We're smart, we're hard working, we're easy to talk to, and we love a challenge.
+
+team-listing:
+  - first-name: Ben
+    last-name: Callahan
+    title: El Presidente
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
+  - first-name: Rob
+    last-name: Harr
+    title: Technical Director
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
+  - first-name: Jeremy
+    last-name: Loyd
+    title: Creative Director
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
+  - first-name: Jän
+    last-name: Ostendorf
+    title: Brand Analyst
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
