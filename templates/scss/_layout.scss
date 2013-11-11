@@ -1,13 +1,9 @@
 .layout-container {
-  @extend %clearfix;
+  @include rem(max-width, 64);
   padding-left: 5%;
   padding-right: 5%;
   margin-left: auto;
   margin-right: auto;
-
-  @include sb-media(75em) {
-    @include rem(max-width, 85);
-  }
 }
 
 .layout-left {
