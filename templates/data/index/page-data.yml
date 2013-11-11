@@ -2,5 +2,7 @@ title: Sparkbox Website
 subtitle: Table of Contents
 
 sparkbox-pages:
+  - page-title: "Styleguide"
+    page-link: "styleguide/"
   - page-title: "Foundry Entry"
     page-link: "foundry-entry.html"
