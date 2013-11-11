@@ -36,3 +36,18 @@ team-listing:
     title: Brand Analyst
     image: http://placehold.it/250x260/9f9f9f/000
     anchor: "#"
+  - first-name: Drew
+    last-name: Clemens
+    title: Director of User Experience
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
+  - first-name: Rob
+    last-name: Tarr
+    title: Developer
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"
+  - first-name: Dominique
+    last-name: Richardson
+    title: Office Manager
+    image: http://placehold.it/250x260/9f9f9f/000
+    anchor: "#"

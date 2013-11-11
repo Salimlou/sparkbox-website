@@ -1,0 +1,5 @@
+.teamListing {
+  ul {
+    @extend %remove-list-styles;
+  }
+}

@@ -1,0 +1,21 @@
+.teamListing-item {
+  @extend %font-primary;
+}
+
+.teamListing-item-mug {
+  width: 100%;
+}
+
+.teamListing-item-name {
+  text-transform: uppercase;
+  color: $c-tx-dark;
+}
+
+.teamListing-item-firstName, .teamListing-item-lastName {
+  display: block;
+}
+
+.teamListing-item-title {
+  color: $c-tx-light;
+  text-transform: uppercase;
+}
