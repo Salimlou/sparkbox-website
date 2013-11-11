@@ -30,7 +30,7 @@
 .foundryArticle-metaItem {
   @extend %font-primary;
   margin: 0;
-  color: $c-tx-articleMeta;
+  color: $c-tx-light;
   font-size: .75em;
   font-weight: 700;
   letter-spacing: .125em;
@@ -38,7 +38,7 @@
 }
 
 .foundryArticle-metaLink {
-  color: $c-tx-articleMeta;
+  color: $c-tx-light;
 }
 
 .foundryArticle-content {
