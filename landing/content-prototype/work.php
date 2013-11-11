@@ -18,7 +18,6 @@
   </section>
   
   <section> 
-    <p>Page Behavior: Items on this page will appear similarly to the other Foundry listing pages</p>
 
 <article>
     <h2><a href="work-detail.php">Project Title</a></li> (this or the entire element needs to be obviously clickable or we'll need a separate "Read About the Project" link)</h2>

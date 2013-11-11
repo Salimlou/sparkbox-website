@@ -28,7 +28,7 @@
 <section class="work">
   <h1>Featured Work</h1>
   <img src="" alt="Featured Image" />
-  <h2><a href="#">Once A Month Meals Responsive Web Design and Application/a></h2>
+  <h2><a href="#">Once A Month Meals Responsive Web Design and Application</a></h2>
   <p><a href="http://www.lenovo.com/au/en/">Go to lenovo.com</a></p>
   <p>Not actual copy. Working with OAMM on a ..... All the details of the project, including a quote from the client. "Fake quote about how much they loved working with us on the project" - Contact Name, Contact Title. The site was a lot of fun to make, and we saw great results. Result #1. Result #2.</p>
 </section>
