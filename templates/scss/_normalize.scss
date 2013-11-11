@@ -39,15 +39,3 @@ p, li {
 a {
   color: $c-anchorLink;
 }
-
-.site-main {
-  margin:.5em auto;
-  width: 95%;
-  max-width: 64em;
-  @include sb-media(45em) {
-    margin: 1.25em auto;
-  }
-  @include sb-media(45em) {
-    margin: 2.5em auto;
-  }
-}
