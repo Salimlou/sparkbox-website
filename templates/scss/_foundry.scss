@@ -106,17 +106,64 @@
   color: $c-tx-articleMeta;
 }
 
+.foundryArticle-content {
+  clear: both;
+  @include sb-media(45em) {
+    padding-left:25%;
+  }
+}
+
+///////////////////////////////
+
 .foundryArticle-intro {
   font-size: 1.25em;
   @include sb-media(45em) {
     font-size: 1.875em;
     line-height: 1.5em;
   }
+  .readingStyle-fullArticle & {
+    display: none;
+  }
 }
 
-.foundryArticle-content {
-  clear: both;
-  @include sb-media(45em) {
-    padding-left:25%;
+.foundryArticle-expandableHeader {
+  .readingStyle-quickRead & {
+    @extend %font-primary;
+    font-size: 1.25em;
+    cursor: pointer;
+    position: relative;
+    @include rem(padding-left,2.75);
+  }
+  .readingStyle-quickRead &:before {
+    content: '+';
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    @include rem(width,1.75);
+    @include rem(height,1.75);
+    color: #1C4C54;
+    background: #C9EDF2;
+  }
+  .readingStyle-quickRead &.expandableContent-isExpanded:before {
+    content: '\2013';
+  }
+}
+
+.foundryArticle-addedHeader {
+  display: none;
+  .readingStyle-quickRead & {
+    display: block;
+  }
+}
+
+.foundryArticle-expandableContent {
+  .readingStyle-quickRead & {
+    @include rem(padding-left,2.75);
+    display: none;
+  }
+  .expandableContent-isExpanded + & {
+    display: block;
   }
 }
