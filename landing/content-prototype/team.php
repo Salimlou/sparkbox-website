@@ -18,28 +18,18 @@
 <section class="hero">
   <h1>A Principled Team Devoted To a Web Built Right</h1>
 
-
+  <p>The only real thing we have to offer is us. It's not what we do &mdash; it's how we do it.</p>
+    <dl>
+    <dt>Prioritize People</dt>
+    <dt>Never Stop Learning</dt>
+    <dt>Collaborate Constantly</dt>
+    <dt>Lead By Example</dt>
+    <dt>Do What You Love</dt>
+  </dl>
 
 </section>
 
 <!--Detail section would contain overall team fun "statistics." This section could also be used to reveal a team member's details like we do on current site (unless we decided to make a page for this).-->
-<section class="values">
-  <p>The only real thing we have to offer is us. It's not what we do &mdash; it's how we do it.</p>
-  <!--I'd like to see us include links to blog articles concerning each of these principles.  -->
-    <dl>
-    <dt>Prioritize People:</dt>
-      <dd>work hard by ultimately working for community, family, and faith.</dd>
-    <dt>Never Stop Learning:</dt>
-      <dd>mastery is an ever-changing target, but we pursue it with a daily hunger.</dd>
-    <dt>Collaborate Constantly:</dt>
-      <dd>band together across disciplines, client and teammate alike, for richer solutions.</dd>
-    <dt>Lead By Example:</dt>
-      <dd>raising the bar for oneself benefits every project and person then touched.</dd>
-    <dt>Do What You Love:</dt>
-      <dd>passion is infectious, and it produces a joy that spreads to work and team.</dd>
-  </dl>
-</section>
-
 
 <section>
   <h2>Meet our team of web freedom fighters.</h2>
