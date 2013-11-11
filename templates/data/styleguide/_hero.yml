@@ -1,0 +1,11 @@
+hero-firstContent: |
+  <h1>A Principled Team Devoted to a Web Built Right</h1>
+  <p>The only real thing we have to offer is us. It's not what we do—it's how we do it.</p>
+hero-secondContent: |
+  <ul>
+    <li>Prioritize People</li>
+    <li>Never Stop Learning</li>
+    <li>Collaborate Constantly</li>
+    <li>Lead By Example</li>
+    <li>Do What You Love</li>
+  </ul>

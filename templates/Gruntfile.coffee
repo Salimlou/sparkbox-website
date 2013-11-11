@@ -91,10 +91,10 @@ module.exports = (grunt) ->
       default_options:
         options:
           css:  'scss'
-          data: 'data'
-          html: 'partials'
-          dest: 'dist/styleguide'
           project_css: 'mq-base'
+          html: 'partials'
+          data: 'data/styleguide'
+          dest: 'dist/styleguide'
           syntax: 'tomorrow-night'
           logo: '/img/styleguide-sb-logo.jpg'
           js: ["/js/Sparkbox.js"]
