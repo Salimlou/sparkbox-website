@@ -21,24 +21,39 @@
 
 <article>
     <h2><a href="work-detail.php">Project Title</a></li> (this or the entire element needs to be obviously clickable or we'll need a separate "Read About the Project" link)</h2>
-    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
 
 <article>
     <h2><a href="work-detail.php">Awesome Client Web Application</a></h2>
-    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
 
 <article>
     <h2><a href="work-detail.php">Once A Month Meals Responsive Web Design and Application</a></h2>
-    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
 
  <article>
     <h2><a href="work-detail.php">DPL Energy Responsive Web Design</a></h2>
-    <p>Project Short Description (1-2 paragraphs). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
 </article>
-    
+
+<article>
+    <h2><a href="work-detail.php">Awesome Client Web Application</a></h2>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
+
+<article>
+    <h2><a href="work-detail.php">Awesome Client Web Application</a></h2>
+    <p>Image or Headline (if an image is provided, that will display. If there is no image, the headline will display)</p>
+    <p>Project Short Description (2-4 sentences). Could include result statistics. Would be used here and on the feature of the homepage. Could include result statistics. Would be used here and on the feature of the homepage.</p>
+</article>
   </section>
   
 
