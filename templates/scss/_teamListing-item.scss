@@ -1,8 +1,12 @@
+$bp-team-2col: 30em;
+$bp-team-3col: $bp-layout-medium;
+
 .teamListing-item {
   @extend %font-primary;
   @include transition(border-color, .25s);
   margin-top: 1.2em;
   border: 8px solid rgba(255, 255, 255, 0);
+  position: relative;
 
   &:hover {
     border: 8px solid $c-bg-primaryLight;
@@ -10,7 +14,7 @@
 
   a { text-decoration: none; }
 
-  @include sb-media( 30em ) {
+  @include sb-media( $bp-team-2col ) {
     width: 48%;
     float: left;
 
@@ -23,7 +27,7 @@
     }
   }
 
-  @include sb-media( $bp-layout-medium ) {
+  @include sb-media( $bp-team-3col ) {
     width: 30%;
     margin-right: 2%;
 
@@ -42,6 +46,39 @@
   }
 }
 
+.teamListing-item-overlayMedia-wrapper {
+  @extend %clearfix;
+  position: relative;
+}
+
+.teamListing-item-overlayText {
+  @include rem( font-size, .8 );
+  letter-spacing: 3px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  // horizontal + vertical positioning:
+  width: 46%;
+  height: 50%;
+  overflow: visible;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  p {
+    line-height: 1.5;
+
+    @include sb-media( $bp-layout-medium ) {
+      line-height: 2.5;  
+    }
+  }
+}
+
 .teamListing-item-mug {
   width: 100%;
   float: left;
@@ -49,7 +86,7 @@
 
 .teamListing-item-nameWrapper {
   background: #FFF;
-  padding: .5em .5em 2em;
+  padding: .5em .5em 1.3em;
   text-align: center;
   clear: left;
 
@@ -73,6 +110,14 @@
   color: $c-tx-dark;
   margin: 0;
   letter-spacing: 5px;
+
+  @include sb-media( $bp-team-2col ) {
+    letter-spacing: 3px;
+  }
+
+  @include sb-media( $bp-team-3col ) {
+    letter-spacing: 3px;
+  }
 }
 
 .teamListing-item-firstName, .teamListing-item-lastName {
@@ -84,8 +129,16 @@
 }
 
 .teamListing-item-lastName {
-  @include rem( font-size, 1.6 );
+  @include rem( font-size, 1.5 );
   margin-top: .3em;
+
+  @include sb-media( $bp-team-2col ) {
+    @include rem( font-size, 1.2 );
+  }
+
+  @include sb-media( $bp-team-3col + 3 ) {
+    @include rem( font-size, 1.6 );
+  }
 }
 
 .teamListing-item-title {

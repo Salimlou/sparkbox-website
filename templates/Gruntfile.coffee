@@ -12,7 +12,7 @@ module.exports = (grunt) ->
         tasks: "compass:dev"
 
       livereload:
-        files: "dist/css/*"
+        files: ["dist/css/*", "dist/*.html"]
         options:
           livereload: true
 
@@ -25,6 +25,10 @@ module.exports = (grunt) ->
         tasks: ["assemble"]
         options:
           livereload: true
+
+      data:
+        files: "data/**/*"
+        tasks: "assemble"
 
       javascript:
         files: ["coffee/*", "js/*.js"]
