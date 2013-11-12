@@ -1,4 +1,6 @@
 .teamListing {
+  @extend %clearfix;
+
   ul {
     @extend %remove-list-styles;
   }
