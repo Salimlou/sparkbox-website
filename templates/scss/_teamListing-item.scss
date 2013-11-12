@@ -1,21 +1,72 @@
 .teamListing-item {
   @extend %font-primary;
+  margin-top: 1.2em;
+
+  &:hover {
+    border: 8px solid $c-bg-darkPrimary;
+  }
+
+  a { text-decoration: none; }
+
+  @include sb-media( 30em ) {
+    width: 48%;
+    float: left;
+
+    li:nth-of-type(odd) & {
+      margin-right: 2%;
+    }
+
+    li:nth-of-type(even) & {
+      margin-left: 2%;
+    }
+  }
 }
 
 .teamListing-item-mug {
   width: 100%;
+  float: left;
+}
+
+.teamListing-item-nameWrapper {
+  background: #FFF;
+  padding: .5em .5em 2em;
+  text-align: center;
+  clear: left;
+
+  &:before {
+    content: " ";
+    border: solid rgba(0, 0, 0, 0);
+    border-bottom-color: #FFF;
+    border-width: 1.2em;
+    position: relative;
+    top: -2.8em;
+  }
 }
 
 .teamListing-item-name {
   text-transform: uppercase;
   color: $c-tx-dark;
+  margin: 0;
+  letter-spacing: 5px;
 }
 
 .teamListing-item-firstName, .teamListing-item-lastName {
   display: block;
 }
 
+.teamListing-item-firstName {
+  @include rem( font-size, .8 );
+}
+
+.teamListing-item-lastName {
+  @include rem( font-size, 1.6 );
+  margin-top: .3em;
+}
+
 .teamListing-item-title {
   color: $c-tx-light;
   text-transform: uppercase;
+  margin-top: .7em;
+  display: block;
+  letter-spacing: 3px;
 }
