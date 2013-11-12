@@ -142,10 +142,12 @@ $bp-team-3col: $bp-layout-medium;
 }
 
 .teamListing-item-title {
+  @include rem( font-size, .7 );
   color: $c-tx-light;
   text-transform: uppercase;
   margin-top: .7em;
   display: block;
   letter-spacing: 3px;
-  min-height: 3em;
+  min-height: 4em;
+  line-height: 1.8;
 }
