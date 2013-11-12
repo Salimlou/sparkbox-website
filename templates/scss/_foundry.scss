@@ -15,7 +15,19 @@
     width: 75%;
   }
   @include sb-media(60em) {
-    font-size: 3.25em;
+    font-size: 3em;
+  }
+}
+
+.foundryArticle-image {
+  margin: 2em 0 0;
+  width: 100%; // Temporary
+  .readingStyle-quickRead & {
+    position: absolute;
+    left: 0;
+    height: 7.5em;
+    width: auto;
+    margin: .5em 0;
   }
 }
 
@@ -42,6 +54,7 @@
 }
 
 .foundryArticle-content {
+  position: relative;
   clear: both;
   @include sb-media(45em) {
     padding-left:25%;
