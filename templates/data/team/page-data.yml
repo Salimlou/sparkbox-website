@@ -19,35 +19,62 @@ team-listing:
   - first-name: Ben
     last-name: Callahan
     title: El Presidente
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/ben-callahan.jpg
     anchor: "#"
   - first-name: Rob
     last-name: Harr
     title: Technical Director
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/rob-harr.jpg
     anchor: "#"
   - first-name: Jeremy
     last-name: Loyd
     title: Creative Director
-    image: http://placehold.it/250x260/9f9f9f/000
-    anchor: "#"
-  - first-name: Jän
-    last-name: Ostendorf
-    title: Brand Analyst
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/jeremy-loyd.jpg
     anchor: "#"
   - first-name: Drew
     last-name: Clemens
     title: Director of User Experience
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/drew-clemens.jpg
     anchor: "#"
   - first-name: Rob
     last-name: Tarr
     title: Developer
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/rob-tarr.jpg
     anchor: "#"
   - first-name: Dominique
     last-name: Richardson
     title: Office Manager
-    image: http://placehold.it/250x260/9f9f9f/000
+    image: img/dom-richardson.jpg
     anchor: "#"
+  - first-name: Ethan
+    last-name: Muller
+    title: Web Developer
+    image: img/ethan-muller.jpg
+    anchor: "#"
+  - first-name: Adam
+    last-name: Simpson
+    title: Web Developer
+    image: img/adam-simpson.jpg
+    anchor: "#"
+  - first-name: Patrick
+    last-name: Simpson
+    title: Web Developer
+    image: img/patrick-simpson.jpg
+    anchor: "#"
+  - first-name: Jeremy
+    last-name: Mack
+    title: Web Developer
+    image: img/jeremy-mack.jpg
+    anchor: "#"
+  - first-name: Neil
+    last-name: Renicker
+    title: Web Developer
+    image: img/neil-renicker.jpg
+    anchor: "#"
+  - first-name: Web
+    last-name: Apprentice
+    title: Sparkbox
+    image: img/web-apprentice.jpg
+    anchor: "#"
+    overlay-text: |
+      <p>This could be you. <a href="#" title="Contact Sparkbox about our apprenticeships">Contact Us.</a></p>

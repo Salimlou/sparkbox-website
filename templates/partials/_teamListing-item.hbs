@@ -1,6 +1,17 @@
 <div class="teamListing-item">
-  <a href="{{anchor}}" title="Stalk {{first-name}} {{last-name}}. Go ahead. It's OK!">
+  {{#unless overlay-text}}<a href="{{anchor}}" title="Stalk {{first-name}} {{last-name}}. Go ahead. It's OK!">{{/unless}}
+
+    {{#if overlay-text }}
+      <div class="teamListing-item-overlayMedia-wrapper">
+        <div class="teamListing-item-overlayText">
+          {{{ overlay-text }}}
+        </div>
+    {{/if}}
+
     <img class="teamListing-item-mug" src="{{image}}" alt="Image of {{first-name}} {{last-name}}, {{title}} at Sparkbox">
+
+    {{#if overlay-text }}</div>{{/if}} {{!-- closes teamListing-item-overlayMedia-wrapper --}}
+
     <div class="teamListing-item-nameWrapper">
       <h3 class="teamListing-item-name">
         <span class="teamListing-item-firstName">{{first-name}}</span> 
@@ -8,5 +19,5 @@
       </h3>
       <small class="teamListing-item-title">{{title}}</small>
     </div>
-  </a>
+  {{#unless overlay-text}}</a>{{/unless}}
 </div>
