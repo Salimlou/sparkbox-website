@@ -5,7 +5,7 @@ Styleguide 1.1
 */
 
 .site-header {
-  background: $c-bg-mainHeader;
+  background: $c-bg-darkGray;
   color: white;
   @include clearfix;
 }
@@ -24,7 +24,7 @@ Styleguide 1.1
 }
 
 .logo-icon {
-  background: $c-bg-logoBlock;
+  background: $c-bg-primary;
   display: table-cell;
   width: 60px;
   height: 60px;
@@ -74,10 +74,10 @@ Styleguide 1.1
   display: table;
   height: 60px;
   &:hover {
-    background: lighten($c-bg-mainHeader,10%);
+    background: lighten($c-bg-darkGray,10%);
   }
   &:active {
-    background: darken($c-bg-mainHeader,10%);
+    background: darken($c-bg-darkGray,10%);
   }
   @include sb-media(36em) {
     display: none;

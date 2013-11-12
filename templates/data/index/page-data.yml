@@ -6,3 +6,5 @@ sparkbox-pages:
     page-link: "styleguide/"
   - page-title: "Foundry Entry"
     page-link: "foundry-entry.html"
+  - page-title: "Team"
+    page-link: "team.html"

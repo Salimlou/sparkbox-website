@@ -1,0 +1,80 @@
+hero:
+  hero-firstContent: |
+    <h1>A Principled Team Devoted to a Web Built Right</h1>
+    <p>The only real thing we have to offer is us. It's not what we do—it's how we do it.</p>
+  hero-secondContent: |
+    <ul>
+      <li>Prioritize People</li>
+      <li>Never Stop Learning</li>
+      <li>Collaborate Constantly</li>
+      <li>Lead By Example</li>
+      <li>Do What You Love</li>
+    </ul>
+
+page-intro:
+  title: Meet Our Team of Web Freedom Fighters
+  subtitle: We're smart, we're hard working, we're easy to talk to, and we love a challenge.
+
+team-listing:
+  - first-name: Ben
+    last-name: Callahan
+    title: El Presidente
+    image: img/ben-callahan.jpg
+    anchor: "#"
+  - first-name: Rob
+    last-name: Harr
+    title: Technical Director
+    image: img/rob-harr.jpg
+    anchor: "#"
+  - first-name: Jeremy
+    last-name: Loyd
+    title: Creative Director
+    image: img/jeremy-loyd.jpg
+    anchor: "#"
+  - first-name: Drew
+    last-name: Clemens
+    title: Director of User Experience
+    image: img/drew-clemens.jpg
+    anchor: "#"
+  - first-name: Rob
+    last-name: Tarr
+    title: Developer
+    image: img/rob-tarr.jpg
+    anchor: "#"
+  - first-name: Dominique
+    last-name: Richardson
+    title: Office Manager
+    image: img/dom-richardson.jpg
+    anchor: "#"
+  - first-name: Ethan
+    last-name: Muller
+    title: Web Developer
+    image: img/ethan-muller.jpg
+    anchor: "#"
+  - first-name: Adam
+    last-name: Simpson
+    title: Web Developer
+    image: img/adam-simpson.jpg
+    anchor: "#"
+  - first-name: Patrick
+    last-name: Simpson
+    title: Web Developer
+    image: img/patrick-simpson.jpg
+    anchor: "#"
+  - first-name: Jeremy
+    last-name: Mack
+    title: Web Developer
+    image: img/jeremy-mack.jpg
+    anchor: "#"
+  - first-name: Neil
+    last-name: Renicker
+    title: Web Developer
+    image: img/neil-renicker.jpg
+    anchor: "#"
+  - first-name: Web
+    last-name: Apprentice
+    title: Sparkbox
+    image: img/web-apprentice.jpg
+    anchor: "#"
+    overlay-text: |
+      <p>This could be you. <a href="#" title="Contact Sparkbox about our apprenticeships">Contact Us.</a></p>
