@@ -7,7 +7,7 @@ Styleguide 1.2
 */
 
 .foundry-header {
-  background-color: $c-articleBackground;
+  background-color: $c-bg-primaryLight2x;
 }
 
 .foundry-header-list {
@@ -54,7 +54,7 @@ Styleguide 1.2
 
 .foundry-header-listItem-link:hover,
 .foundry-header-listItem-selectedLink {
-  background-color: $c-articleBackground-selected;
+  background-color: $c-bg-primaryLight;
   @include sb-media(45em) {
     &:after {
       content: '';
@@ -64,7 +64,7 @@ Styleguide 1.2
       @include transform(rotate(45deg));
       width: .875em;
       height: .875em;
-      background-color: $c-articleBackground-selected;
+      background-color: $c-bg-primaryLight;
     }
   }
 }

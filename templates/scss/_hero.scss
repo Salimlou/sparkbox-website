@@ -6,7 +6,7 @@ Styleguide 1.3
 */
 
 .hero-wrapper {
-  background-color: $c-bg-darkPrimary;
+  background-color: $c-bg-primaryDark;
   padding: 2em 0;
 
   @include sb-media( $bp-layout-medium ) {

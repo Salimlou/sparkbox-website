@@ -1,9 +1,11 @@
 .teamListing-item {
   @extend %font-primary;
+  @include transition(border-color, .25s);
   margin-top: 1.2em;
+  border: 8px solid rgba(255, 255, 255, 0);
 
   &:hover {
-    border: 8px solid $c-bg-darkPrimary;
+    border: 8px solid $c-bg-primaryLight;
   }
 
   a { text-decoration: none; }
@@ -17,6 +19,24 @@
     }
 
     li:nth-of-type(even) & {
+      margin-left: 2%;
+    }
+  }
+
+  @include sb-media( $bp-layout-medium ) {
+    width: 30%;
+    margin-right: 2%;
+
+    li:nth-of-type(even) & {
+      margin-left: 0;
+    }
+
+    li:nth-of-type(3n+2) & {
+      margin-left: 2%;
+    }
+
+    li:nth-of-type(3n+3) & {
+      margin-right: 0;
       margin-left: 2%;
     }
   }
@@ -34,12 +54,17 @@
   clear: left;
 
   &:before {
+    @include transition(position, .25s);
     content: " ";
     border: solid rgba(0, 0, 0, 0);
     border-bottom-color: #FFF;
-    border-width: 1.2em;
+    border-width: 2em;
     position: relative;
     top: -2.8em;
+
+    .teamListing-item:hover & {
+      top: -3.5em;
+    }
   }
 }
 
@@ -69,4 +94,5 @@
   margin-top: .7em;
   display: block;
   letter-spacing: 3px;
+  min-height: 3em;
 }
