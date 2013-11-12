@@ -1,0 +1,30 @@
+/*
+Simple text intro for introducing pages. Contains a title and a subtitle.
+
+Styleguide 1.4
+*/
+
+.pageIntro {
+  text-align: center;
+}
+
+.pageIntro-title {
+  @include rem(font-size, 1.4);
+  color: $c-tx-dark;
+  letter-spacing: 0px;
+
+  @include sb-media( $bp-layout-small ) {
+    @include rem(font-size, 2.3);
+  }
+}
+
+.pageIntro-subtitle {
+  @include rem(font-size, 1.3);
+  color: $c-tx-light;
+  max-width: 24em;
+  margin: 0 auto;
+
+  @include sb-media( $bp-layout-small ) {
+    @include rem(font-size, 1.5);
+  }
+}

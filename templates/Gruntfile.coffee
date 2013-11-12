@@ -12,7 +12,7 @@ module.exports = (grunt) ->
         tasks: "compass:dev"
 
       livereload:
-        files: "dist/css/*"
+        files: ["dist/css/*", "dist/*.html"]
         options:
           livereload: true
 
@@ -25,6 +25,10 @@ module.exports = (grunt) ->
         tasks: ["assemble"]
         options:
           livereload: true
+
+      data:
+        files: "data/**/*"
+        tasks: "assemble"
 
       javascript:
         files: ["coffee/*", "js/*.js"]
@@ -75,6 +79,11 @@ module.exports = (grunt) ->
           data: "data/foundry-entry/*.yml"
         src: "partials/foundry-entry.hbs"
         dest: "dist/foundry-entry.html"
+      team:
+        options:
+          data: "data/team/*.yml"
+        src: "partials/team.hbs"
+        dest: "dist/team.html"
 
     concat:
       js:
@@ -86,10 +95,10 @@ module.exports = (grunt) ->
       default_options:
         options:
           css:  'scss'
-          data: 'data'
-          html: 'partials'
-          dest: 'dist/styleguide'
           project_css: 'mq-base'
+          html: 'partials'
+          data: 'data/styleguide'
+          dest: 'dist/styleguide'
           syntax: 'tomorrow-night'
           logo: '/img/styleguide-sb-logo.jpg'
           js: ["/js/Sparkbox.js"]
