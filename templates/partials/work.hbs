@@ -2,35 +2,21 @@
 
 {{> _site-header}}
 
-<main class="layout-container site-main">
-  <section class="layout-verticalSpace">
+<main>
+  <section>
 
 
   <ol class="evenGrid">
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
-    <li class="evenGrid-item">
-      <h3>Project Title</h3>
-      <p>Help one of the top-ten grossing websites optimize for mobile.</p>
-    </li>
+    {{#each work-items}}
+      <li class="evenGrid-item">
+      <a href="{{ url }}">
+        <div class="thing">
+          <h3>{{ title }}</h3>
+          <p>{{ headline }}</p>
+        </div>
+      </a>
+      </li>
+    {{/each}}
   </ol>
 
 
