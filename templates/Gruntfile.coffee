@@ -84,6 +84,11 @@ module.exports = (grunt) ->
           data: "data/team/*.yml"
         src: "partials/team.hbs"
         dest: "dist/team.html"
+      work:
+        options:
+          data: "data/work/*.yml"
+        src: "partials/work.hbs"
+        dest: "dist/work.html"
 
     concat:
       js:
