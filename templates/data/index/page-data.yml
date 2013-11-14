@@ -8,3 +8,5 @@ sparkbox-pages:
     page-link: "foundry-entry.html"
   - page-title: "Team"
     page-link: "team.html"
+  - page-title: "Work"
+    page-link: "work.html"

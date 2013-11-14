@@ -1,3 +1,9 @@
+.foundryArticle-entry {
+  p {
+    @extend .long-reading;
+  }
+}
+
 .foundryArticle-header {
   position: relative;
   @include clearfix;

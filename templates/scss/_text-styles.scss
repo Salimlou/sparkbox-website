@@ -1,0 +1,14 @@
+/*
+Demonstration of reusable text styles.
+
+Styleguide 1.5
+*/
+
+.long-reading {
+  // apply this class to stretches of content
+  // that are lengthy, such as
+  // blog articles or about pages.
+  // For comfortable reading.
+  font-size: 1.125em;
+  line-height: 1.75em;
+}
