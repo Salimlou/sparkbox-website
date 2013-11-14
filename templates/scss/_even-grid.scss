@@ -1,17 +1,61 @@
+$bp-evenGrid-2col: 40em;
+$bp-evenGrid-3col: 65em;
+
+@mixin ratio-padding($num-across){
+  $base-ratio: 80.27%;
+  padding-bottom: $base-ratio / $num-across;
+}
+
 .evenGrid {
   // Reset list styles
   list-style: none;
   padding: 0;
   margin: 0;
+
+  // Contain floats
+  width: 100%;
+  float: left;
+
+  // The whole list also has a border,
+  // to make it even all the way around.
+  // Otherwise we'd have to do a bunch of
+  // nth-child craziness for every breakpoint
+  border: 0.6em solid white;
+  background: white;
+}
+
+.evenGrid-itemWrapper {
+  @include sb-media($bp-evenGrid-2col) {
+    // Put items side-by-side, 2 across
+    width: 50%;
+    float: left;
+
+    // Activate intrinsic ratio powers
+    height: 0;
+    @include ratio-padding(2);
+    position: relative;
+  }
+  @include sb-media($bp-evenGrid-3col) {
+    // Put items side-by-side, 3 across
+    width: 33.33%;
+
+    // Adjust intrinsic ratio powers
+    @include ratio-padding(3);
+  }
 }
 
 .evenGrid-item {
-}
-
-.thing {
   padding: 0.6em;
   border: 0.6em solid white;
-
   background-color: #B6E1E8;
   color: #265e67;
+
+  @include sb-media($bp-evenGrid-2col) {
+    // Activate intrinsic ratio powers
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -8,11 +8,15 @@
 
   <ol class="evenGrid">
     {{#each work-items}}
-      <li class="evenGrid-item">
-      <a href="{{ url }}">
-        <div class="thing">
-          <h2>{{ title }}</h2>
-          <p>{{ headline }}</p>
+      <li class="">
+      <a href="{{ url }}" title="Read more about {{ title }}">
+        <div class="evenGrid-itemWrapper">
+          <div class="evenGrid-item">
+
+            <h2>{{ title }}</h2>
+            <p>{{ headline }}</p>
+
+          </div>
         </div>
       </a>
       </li>
