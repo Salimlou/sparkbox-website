@@ -1,6 +1,6 @@
-$serve-to-nomq-max-width: 60em !default;
-
 @mixin sb-media($query) {
+  $serve-to-nomq-max-width: 60em !default;
+
   @if $no-mq-support{
     @content;
   } @else {
