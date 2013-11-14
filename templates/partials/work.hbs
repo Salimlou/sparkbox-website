@@ -8,13 +8,20 @@
 
   <ol class="evenGrid">
     {{#each work-items}}
-      <li class="">
+      <li>
       <a href="{{ url }}" title="Read more about {{ title }}">
         <div class="evenGrid-itemWrapper">
           <div class="evenGrid-item">
 
             <h2>{{ title }}</h2>
-            <p>{{ headline }}</p>
+
+            {{#if headline}}
+              <p>{{ headline }}</p>
+            {{/if}}
+
+            {{#if image}}
+              <img src="{{ image }}" alt="{{ image_alt }}" />
+            {{/if}}
 
           </div>
         </div>
