@@ -84,7 +84,7 @@ Styleguide 1.1
   }
 }
 
-.menu-icon {
+.nav-button--icon {
   display: table-cell;
   height: 60px;
   width: 60px;
@@ -95,11 +95,11 @@ Styleguide 1.1
   }
 }
 
-.menu-text {
+.nav-button--text {
   display: none;
 }
 
-.nav-list {
+.site-nav--list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -110,14 +110,14 @@ Styleguide 1.1
   }
 }
 
-.nav-item {
+.site-nav--item {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   line-height: 1em;
 }
 
-.nav-link {
+.site-nav--link {
   @extend %font-primary;
   display: block;
   @include rem(padding, .5, .75);
