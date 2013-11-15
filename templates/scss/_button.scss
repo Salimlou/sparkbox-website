@@ -1,0 +1,9 @@
+%button {
+  cursor: pointer;
+  color: #b3e1e8;
+  background-color: #265e67;
+}
+
+.button-standard {
+  @extend %button;
+}
