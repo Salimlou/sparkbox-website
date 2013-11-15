@@ -1,4 +1,4 @@
-.layout-container {
+.layout--container {
   max-width: $bp-siteMaxWidth;
   padding-left: 5%;
   padding-right: 5%;
@@ -11,20 +11,20 @@
   }
 }
 
-.layout-left {
+.layout--left {
   float: left;
 }
 
-.layout-right {
+.layout--right {
   float: right;
 }
 
-.layout-horizontalSpace {
+.layout--horizontal-space {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-.layout-verticalSpace {
+.layout--vertical-space {
   margin-top: 1em;
 
   @include sb-media( 45em ) {
@@ -32,7 +32,7 @@
   }
 }
 
-.layout-verticalSpace-2x {
+.layout--vertical-space-2x {
   margin-top: 2em;
 
   @include sb-media( 45em ) {
@@ -40,7 +40,7 @@
   }
 }
 
-.layout-verticalSpace-3x {
+.layout--vertical-space-3x {
   margin-top: 3em;
 
   @include sb-media( 45em ) {
@@ -48,19 +48,19 @@
   }
 }
 
-.layout-centered {
+.layout--centered {
   margin-left: auto;
   margin-right: auto;
 }
 
-.layout-allowsRightSidebar {
+.layout--allows-right-sidebar {
   @include sb-media( $bp-layout-medium ) {
     width: 68%;
     float: left;
   }
 }
 
-.layout-rightSidebar {
+.layout--right-sidebar {
   @include sb-media( $bp-layout-medium ) {
     width: 25%;
     float: right;
