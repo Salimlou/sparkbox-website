@@ -10,7 +10,7 @@ Styleguide 1.2
   background-color: $c-bg-primaryLight2x;
 }
 
-.foundry-header-list {
+.foundry-header--list {
   @extend %remove-list-styles;
   display: table;
   width: 100%;
@@ -22,7 +22,7 @@ Styleguide 1.2
   }
 }
 
-.foundry-header-listItem {
+.foundry-header--list-item {
   vertical-align: middle;
   width:50%;
   display: table-cell;
@@ -37,7 +37,7 @@ Styleguide 1.2
   }
 }
 
-.foundry-header-listItem-link {
+.foundry-header--link {
   @extend %font-primary;
   color: $c-tx-dark;
   font-size: 1.1875em;
@@ -52,8 +52,8 @@ Styleguide 1.2
   }
 }
 
-.foundry-header-listItem-link:hover,
-.foundry-header-listItem-selectedLink {
+.foundry-header--link:hover,
+.foundry-header--link_is-selected {
   background-color: $c-bg-primaryLight;
   @include sb-media(45em) {
     &:after {
