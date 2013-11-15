@@ -1,12 +1,16 @@
 $bp-evenGrid-2col: 40em;
 $bp-evenGrid-3col: 65em;
+
 $base-ratio: 80.27%;
+$item-inner-padding: 0.6em;
 
 .evenGrid {
   // Reset list styles
   list-style: none;
   padding: 0;
   margin: 0;
+
+  text-align: center;
 
   // Contain floats
   width: 100%;
@@ -44,7 +48,7 @@ $base-ratio: 80.27%;
 }
 
 .evenGrid-contents {
-  padding: 0.6em;
+  padding: $item-inner-padding;
   border: 0.6em solid white;
   background-color: #B6E1E8;
   color: #265e67;
@@ -54,13 +58,53 @@ $base-ratio: 80.27%;
   // element, so let's force it.
   cursor: pointer;
 
-
   @include sb-media($bp-evenGrid-2col) {
     // Activate intrinsic ratio powers
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
+    right: 0;
+  }
+
+  &.has-image {
+    // Remove padding,
+    // so image can touch bottom.
+    // Stop laughing.
+    padding-bottom: 0;
+  }
+}
+
+.evenGrid-imageWrapper {
+  @include sb-media($bp-evenGrid-2col) {
+    position: absolute;
+    top: $item-inner-padding;
+    left: $item-inner-padding;
+    bottom: 0;
+    right: $item-inner-padding;
+  }
+}
+
+.evenGrid-image {
+  width: 100%;
+  max-width: 17em;
+
+  // Center
+  margin: 0 auto;
+
+  // Prevent space at bottom
+  display: block;
+
+  @include sb-media($bp-evenGrid-2col) {
+    // No bigger than natural width
+    max-width: 90%;
+
+    // Attach to bottom
+    position: absolute;
+    bottom: 0;
+
+    // Center absolute element
+    left: 0;
     right: 0;
   }
 }

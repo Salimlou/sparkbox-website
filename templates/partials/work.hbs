@@ -12,7 +12,7 @@
       <a href="{{ url }}" title="Read more about {{ title }}">
 
         <div class="evenGrid-itemInnerWrapper">
-          <div class="evenGrid-contents">
+          <div class="evenGrid-contents {{#if image}}has-image{{/if}}">
 
             <h2>{{ title }}</h2>
 
@@ -21,7 +21,9 @@
             {{/if}}
 
             {{#if image}}
-              <img src="{{ image }}" alt="{{ image_alt }}" />
+            <div class="evenGrid-imageWrapper">
+              <img class="evenGrid-image" src="{{ image }}" alt="{{ image_alt }}" />
+            </div>
             {{/if}}
 
           </div>
