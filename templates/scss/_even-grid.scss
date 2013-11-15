@@ -1,8 +1,9 @@
 $bp-evenGrid-2col: 40em;
 $bp-evenGrid-3col: 65em;
+$bp-evenGrid-4col: 90em;
 
 $base-ratio: 80.27%;
-$item-inner-padding: 0.6em;
+$item-inner-padding: 0.9em;
 
 .evenGrid {
   // Reset list styles
@@ -33,7 +34,12 @@ $item-inner-padding: 0.6em;
 
   @include sb-media($bp-evenGrid-3col) {
     // Put items side-by-side, 3 across
+    // Rounding down, to be safe.
     width: 33.32%;
+  }
+  @include sb-media($bp-evenGrid-4col) {
+    // Put items side-by-side, 4 across
+    width: 25%;
   }
 }
 
@@ -66,13 +72,13 @@ $item-inner-padding: 0.6em;
     bottom: 0;
     right: 0;
   }
+}
 
-  &.has-image {
-    // Remove padding,
-    // so image can touch bottom.
-    // Stop laughing.
-    padding-bottom: 0;
-  }
+.evenGrid-contents-hasImage {
+  // Remove padding,
+  // so image can touch bottom.
+  // Stop laughing.
+  padding-bottom: 0;
 }
 
 .evenGrid-imageWrapper {
@@ -87,7 +93,7 @@ $item-inner-padding: 0.6em;
 
 .evenGrid-image {
   width: 100%;
-  max-width: 17em;
+  max-width: 25em;
 
   // Center
   margin: 0 auto;
