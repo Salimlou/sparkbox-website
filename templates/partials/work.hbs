@@ -8,10 +8,11 @@
 
   <ol class="evenGrid">
     {{#each work-items}}
-      <li>
+      <li class="evenGrid-item">
       <a href="{{ url }}" title="Read more about {{ title }}">
-        <div class="evenGrid-itemWrapper">
-          <div class="evenGrid-item">
+
+        <div class="evenGrid-itemInnerWrapper">
+          <div class="evenGrid-contents">
 
             <h2>{{ title }}</h2>
 
@@ -25,6 +26,7 @@
 
           </div>
         </div>
+
       </a>
       </li>
     {{/each}}
