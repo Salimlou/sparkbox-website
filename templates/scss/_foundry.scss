@@ -1,15 +1,15 @@
-.foundryArticle-entry {
+.foundry-article--entry {
   p {
     @extend .long-reading;
   }
 }
 
-.foundryArticle-header {
+.foundry-article--header {
   position: relative;
   @include clearfix;
 }
 
-.foundryArticle-title {
+.foundry-article--title {
   @include sb-media(25em) {
     font-size: 2.25em;
   }
@@ -25,10 +25,10 @@
   }
 }
 
-.foundryArticle-image {
+.foundry-article--image {
   margin: 2em 0 0;
   width: 100%; // Temporary
-  .readingStyle-quickRead & {
+  .reading-style--quick-read & {
     position: absolute;
     left: 0;
     height: 7.5em;
@@ -37,7 +37,7 @@
   }
 }
 
-.foundryArticle-meta {
+.foundry-article--meta {
   @include sb-media(45em) {
     position: absolute;
     bottom: 0;
@@ -45,7 +45,7 @@
   }
 }
 
-.foundryArticle-metaItem {
+.foundry-article--meta-item {
   @extend %font-primary;
   margin: 0;
   color: $c-tx-light;
@@ -55,11 +55,11 @@
   text-transform: uppercase;
 }
 
-.foundryArticle-metaLink {
+.foundry-article--meta-link {
   color: $c-tx-light;
 }
 
-.foundryArticle-content {
+.foundry-article--content {
   position: relative;
   clear: both;
   @include sb-media(45em) {
@@ -69,26 +69,27 @@
 
 ///////////////////////////////
 
-.foundryArticle-intro {
+.foundry-article--intro {
   font-size: 1.25em;
   @include sb-media(45em) {
     font-size: 1.875em;
     line-height: 1.5em;
   }
-  .readingStyle-fullArticle & {
+  .reading-style--full-article & {
     display: none;
   }
 }
 
-.foundryArticle-expandableHeader {
-  .readingStyle-quickRead & {
+.foundry-article--expandable-header {
+  .reading-style--quick-read & {
     @extend %font-primary;
     font-size: 1.25em;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
     @include rem(padding-left,2.75);
   }
-  .readingStyle-quickRead &:before {
+  .reading-style--quick-read &:before {
     content: '+';
     display: table-cell;
     text-align: center;
@@ -100,24 +101,24 @@
     color: #1C4C54;
     background: #C9EDF2;
   }
-  .readingStyle-quickRead &.expandableContent-isExpanded:before {
+  .reading-style--quick-read &.expandable-content_is-expanded:before {
     content: '\2013';
   }
 }
 
-.foundryArticle-addedHeader {
+.foundry-article--added-header {
   display: none;
-  .readingStyle-quickRead & {
+  .reading-style--quick-read & {
     display: block;
   }
 }
 
-.foundryArticle-expandableContent {
-  .readingStyle-quickRead & {
+.foundry-article--expandable-content {
+  .reading-style--quick-read & {
     @include rem(padding-left,2.75);
     display: none;
   }
-  .expandableContent-isExpanded + & {
+  .expandable-content_is-expanded + & {
     display: block;
   }
 }

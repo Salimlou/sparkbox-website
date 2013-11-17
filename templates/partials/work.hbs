@@ -6,13 +6,13 @@
   <section>
 
 
-  <ol class="evenGrid">
+  <ol class="even-grid">
     {{#each work-items}}
-      <li class="evenGrid-item">
+      <li class="even-grid--item">
       <a href="{{ url }}" title="Read more about {{ title }}">
 
-        <div class="evenGrid-itemInnerWrapper">
-          <div class="evenGrid-contents {{#if image}}evenGrid-contents-hasImage{{/if}}">
+        <div class="even-grid--item-inner-wrapper">
+          <div class="even-grid--contents {{#if image}}even-grid--contents_has-image{{/if}}">
 
             <h2>{{ title }}</h2>
 
@@ -21,8 +21,8 @@
             {{/if}}
 
             {{#if image}}
-            <div class="evenGrid-imageWrapper">
-              <img class="evenGrid-image" src="{{ image }}" alt="{{ image_alt }}" />
+            <div class="even-grid--image-wrapper">
+              <img class="even-grid--image" src="{{ image }}" alt="{{ image_alt }}" />
             </div>
             {{/if}}
 
@@ -34,7 +34,7 @@
     {{/each}}
   </ol>
 
-  <span class="button-standard">something</span>
+  <span class="button--standard">something</span>
 
   </section>
 </main>

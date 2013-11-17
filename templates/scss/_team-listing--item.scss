@@ -1,7 +1,7 @@
 $bp-team-2col: 30em;
 $bp-team-3col: $bp-layout-medium;
 
-.teamListing-item {
+.team-listing--item {
   @extend %font-primary;
   @include transition(border-color, .25s);
   margin-top: 1.2em;
@@ -46,12 +46,12 @@ $bp-team-3col: $bp-layout-medium;
   }
 }
 
-.teamListing-item-overlayMedia-wrapper {
+.team-listing--item--overlay {
   @extend %clearfix;
   position: relative;
 }
 
-.teamListing-item-overlayText {
+.team-listing--item--overlay--text {
   @include rem( font-size, .8 );
   letter-spacing: 3px;
   text-align: center;
@@ -79,12 +79,12 @@ $bp-team-3col: $bp-layout-medium;
   }
 }
 
-.teamListing-item-mug {
+.team-listing--item--mug {
   width: 100%;
   float: left;
 }
 
-.teamListing-item-nameWrapper {
+.team-listing--item--name-wrapper {
   background: #FFF;
   padding: .5em .5em 1.3em;
   text-align: center;
@@ -99,13 +99,13 @@ $bp-team-3col: $bp-layout-medium;
     position: relative;
     top: -2.8em;
 
-    .teamListing-item:hover & {
+    .team-listing--item:hover & {
       top: -3.5em;
     }
   }
 }
 
-.teamListing-item-name {
+.team-listing--item--name {
   text-transform: uppercase;
   color: $c-tx-dark;
   margin: 0;
@@ -120,15 +120,15 @@ $bp-team-3col: $bp-layout-medium;
   }
 }
 
-.teamListing-item-firstName, .teamListing-item-lastName {
+.team-listing--item--first-name, .team-listing--item--last-name {
   display: block;
 }
 
-.teamListing-item-firstName {
+.team-listing--item--first-name {
   @include rem( font-size, .8 );
 }
 
-.teamListing-item-lastName {
+.team-listing--item--last-name {
   @include rem( font-size, 1.5 );
   margin-top: .3em;
 
@@ -141,7 +141,7 @@ $bp-team-3col: $bp-layout-medium;
   }
 }
 
-.teamListing-item-title {
+.team-listing---item-title {
   @include rem( font-size, .7 );
   color: $c-tx-light;
   text-transform: uppercase;
