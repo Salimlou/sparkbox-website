@@ -5,7 +5,7 @@ at small sreen widths.
 Styleguide 1.3
 */
 
-.hero-wrapper {
+.hero--wrapper {
   background-color: $c-bg-primaryDark;
   padding: 2em 0;
 
@@ -16,33 +16,31 @@ Styleguide 1.3
 
 .hero {
   @extend %clearfix;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $c-tx-light3x;
-    line-height: 1.4;
-  }
-
-  h1 {
-    @include rem(font-size, 1.9);
-  }
-
-  p {
-    @include rem(font-size, 1.5);
-    color: $c-tx-light2x;
-    font-weight: lighter;
-    margin-bottom: 0;
-  }
-
-  ul {
-    @extend %remove-list-styles;
-    @extend %font-primary;
-    @include rem(font-size, 1.2);
-    color: $c-tx-light3x;
-    line-height: 1.9;
-  }
 }
 
-.hero-firstContent {
+.hero--main-header {
+  @include rem(font-size, 1.9);
+
+  color: $c-tx-light3x;
+  line-height: 1.4;
+}
+
+.hero--body {
+  @include rem(font-size, 1.5);
+  color: $c-tx-light2x;
+  font-weight: lighter;
+  margin-bottom: 0;
+}
+
+.hero--list {
+  @extend %remove-list-styles;
+  @extend %font-primary;
+  @include rem(font-size, 1.2);
+  color: $c-tx-light3x;
+  line-height: 1.9;
+}
+
+.hero--first-content {
   border-bottom: 3px solid $c-tx-light3x;
   padding-bottom: 1.2em;
 
@@ -57,7 +55,7 @@ Styleguide 1.3
   }
 }
 
-.hero-secondContent {
+.hero--second-content {
   margin-top: 1.8em;
 
   @include sb-media( $bp-layout-small ) {
