@@ -84,6 +84,7 @@
   .reading-style--quick-read & {
     @extend %font-primary;
     font-size: 1.25em;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
     @include rem(padding-left,2.75);
