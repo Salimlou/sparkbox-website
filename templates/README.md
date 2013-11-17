@@ -20,9 +20,8 @@ Project Setup:
 
 Due to copyright issues and the public nature of this repo, some vendor font files are intentionally missing. Steps for Sparkboxers to run these fonts locally:
 
-* In the seesparkbox 2.0 shared assets folder, navigate to `Design/fonts/sparkbox_site-07112013/Fonts/`
-* Copy all fonts within this directory
-* Create a new directory in the project repo called `vendor` in templates/public/css/fonts, and copy fonts into this new directory
+* In the seesparkbox 2.0 shared assets folder, navigate to `Design/fonts/sparkbox_site-12112013/Fonts/`
+* Copy all fonts within this directory, and place them in the project repo here: `templates/public/css/fonts`
 * After running `grunt`, the vendor fonts will be ready to go
 
 ## Conventions
