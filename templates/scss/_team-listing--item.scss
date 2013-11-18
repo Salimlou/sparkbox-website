@@ -4,15 +4,24 @@ $bp-team-3col: $bp-layout-medium;
 .team-listing--item {
   @extend %font-primary;
   @include transition(border-color, .25s);
+  background: #fff;
   margin-top: 1.2em;
   border: 8px solid rgba(255, 255, 255, 0);
   position: relative;
+  clear: left;
 
   &:hover {
     border: 8px solid $c-bg-primaryLight;
   }
 
-  a { text-decoration: none; }
+  a { 
+    @extend %clearfix;
+    text-decoration: none;
+  }
+
+  @include sb-media( $bp-layout-small ) {
+    clear: none;
+  }
 
   @include sb-media( $bp-team-2col ) {
     width: 48%;
@@ -80,27 +89,38 @@ $bp-team-3col: $bp-layout-medium;
 }
 
 .team-listing--item--mug {
-  width: 100%;
   float: left;
+  width: 40%;
+
+  @include sb-media( $bp-layout-small ) {
+    width: 100%;
+  }
 }
 
 .team-listing--item--name-wrapper {
-  background: #FFF;
-  padding: .5em .5em 1.3em;
+  padding: 1.2em 1.1em 1.3em;
   text-align: center;
-  clear: left;
+  float: left;
+  width: 60%;
 
-  &:before {
-    @include transition(position, .25s);
-    content: " ";
-    border: solid rgba(0, 0, 0, 0);
-    border-bottom-color: #FFF;
-    border-width: 2em;
-    position: relative;
-    top: -2.8em;
+  @include sb-media( $bp-layout-small ) {
+    clear: left;
+    padding: 1.2em .5em 1.3em;
+    float: none;
+    width: auto;
 
-    .team-listing--item:hover & {
-      top: -3.5em;
+    &:before {
+      @include transition(position, .25s);
+      content: " ";
+      border: solid rgba(0, 0, 0, 0);
+      border-bottom-color: #FFF;
+      border-width: 2em;
+      position: relative;
+      top: -2.8em;
+
+      .team-listing--item:hover & {
+        top: -3.5em;
+      }
     }
   }
 }
@@ -129,7 +149,7 @@ $bp-team-3col: $bp-layout-medium;
 }
 
 .team-listing--item--last-name {
-  @include rem( font-size, 1.5 );
+  @include rem( font-size, 1.2 );
   margin-top: .3em;
 
   @include sb-media( $bp-team-2col ) {
@@ -141,7 +161,7 @@ $bp-team-3col: $bp-layout-medium;
   }
 }
 
-.team-listing---item-title {
+.team-listing--item--title {
   @include rem( font-size, .7 );
   color: $c-tx-light;
   text-transform: uppercase;
