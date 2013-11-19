@@ -5,3 +5,7 @@
     @extend %remove-list-styles;
   }
 }
+
+.team-listing a {
+  text-decoration: none;
+}

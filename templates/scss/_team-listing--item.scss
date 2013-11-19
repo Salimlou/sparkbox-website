@@ -4,13 +4,12 @@
   margin-top: 1.2em;
   position: relative;
   clear: left;
-
-  a { 
-    @extend %clearfix;
-    text-decoration: none;
-  }
+  @extend %clearfix;
+  display: flex;
+  align-items: center;
 
   @include sb-media( $bp-layout-small ) {
+    display: block;
     background: transparent;
     clear: none;
     border: 8px solid rgba(255, 255, 255, 0);
@@ -71,6 +70,7 @@
   text-align: center;
   color: #FFF;
   text-transform: uppercase;
+
   // horizontal + vertical positioning:
   width: 46%;
   height: 50%;
@@ -95,10 +95,11 @@
 
 .team-listing--item--mug {
   float: left;
-  width: 40%;
+  width: 30%;
 
   .team-listing li:nth-of-type(even) & {
     float: right;
+    order: 2; // instructions for the flexbox model
   }
 
   @include sb-media( $bp-layout-small ) {
@@ -111,11 +112,40 @@
 }
 
 .team-listing--item--name-wrapper {
-  padding: 1.2em 1.1em 1.3em;
+  padding: .4em;
   text-align: center;
   float: left;
-  width: 60%;
+  width: 70%;
   position: relative;
+
+  &:before {
+    @include transition(position, .25s);
+    content: " ";
+    border: solid rgba(0, 0, 0, 0);
+    border-right-color: #FFF;
+    border-width: 1.9em;
+    left: -2.5em;
+    position: absolute;
+
+    .team-listing--item:hover & {
+      left: -3.1em;
+    }
+  }
+
+  .team-listing li:nth-of-type(even) &:before {
+    @include transition(position, .15s);
+    border: solid rgba(0, 0, 0, 0);
+    border-left-color: #FFF;
+    border-width: 1.9em;
+    left: auto;
+    right: -2.5em;
+    position: absolute;
+  }
+
+  .team-listing li:nth-of-type(even) .team-listing--item:hover &:before {
+    left: auto;
+    right: -3.1em;
+  }
 
   @include sb-media( $bp-layout-small ) {
     background: #fff;
@@ -125,16 +155,26 @@
     width: auto;
 
     &:before {
+      // The zealous use of !important here
+      // is to violently seize the reigning power from
+      // all the nth-selector styles up above.
+      // It's not ideal, but sometimes aggressive dominance
+      // is the only recourse against rebel nth-selector uprisings.
+
       @include transition(position, .25s);
-      content: " ";
       border: solid rgba(0, 0, 0, 0);
-      border-bottom-color: #FFF;
-      border-width: 2em;
-      position: relative;
-      top: -2.8em;
+      border-left-color: rgba(0, 0, 0, 0) !important;
+      border-bottom-color: #FFF !important;
+      border-width: 2em !important;
+      position: relative !important;
+      top: -3.5em;
+      left: auto !important;
+      right: auto !important;
 
       .team-listing--item:hover & {
-        top: -3.5em;
+        top: -4.3em;
+        left: auto !important;
+        right: auto !important;
       }
     }
   }
@@ -144,6 +184,7 @@
   text-transform: uppercase;
   color: $c-tx-dark;
   margin: 0;
+  letter-spacing: 3px;
 
   @include sb-media( $bp-layout-small ) {
     letter-spacing: 3px;
@@ -159,12 +200,24 @@
 }
 
 .team-listing--item--first-name {
-  @include rem( font-size, .8 );
+  @include rem( font-size, .6 );
+
+  @include sb-media( 28em ) {
+    @include rem( font-size, .7 );
+  }
+
+  @include sb-media( $bp-layout-small ) {
+    @include rem( font-size, .8 );
+  }
 }
 
 .team-listing--item--last-name {
   @include rem( font-size, 1.2 );
   margin-top: .3em;
+
+  @include sb-media( 28em ) {
+    @include rem( font-size, 1.6 );
+  }
 
   @include sb-media( $bp-layout-small ) {
     @include rem( font-size, 1.2 );
@@ -176,13 +229,15 @@
 }
 
 .team-listing--item--title {
-  @include rem( font-size, .7 );
+  @include rem( font-size, .6 );
   color: $c-tx-light;
   text-transform: uppercase;
   margin-top: .7em;
   display: block;
+  letter-spacing: 2px;
   
   @include sb-media( $bp-layout-small ) {
+    @include rem( font-size, .7 );
     min-height: 4em;
     letter-spacing: 3px;
   }
