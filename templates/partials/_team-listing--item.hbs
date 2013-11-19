@@ -1,23 +1,24 @@
-<div class="team-listing--item">
-  {{#unless overlay-text}}<a href="{{anchor}}" title="Stalk {{first-name}} {{last-name}}. Go ahead. It's OK!">{{/unless}}
+{{#unless overlay-text}}<a href="{{anchor}}" title="Stalk {{first-name}} {{last-name}}. Go ahead. It's OK!">{{/unless}}
 
-    {{#if overlay-text }}
-      <div class="team-listing--item--overlay">
-        <div class="team-listing--item--overlay--text">
-          {{{ overlay-text }}}
-        </div>
-    {{/if}}
+  <div class="team-listing--item">
+      {{#if overlay-text }}
+        <div class="team-listing--item--overlay">
+          <div class="team-listing--item--overlay--text">
+            {{{ overlay-text }}}
+          </div>
+      {{/if}}
 
-    <img class="team-listing--item--mug" src="{{image}}" alt="Image of {{first-name}} {{last-name}}, {{title}} at Sparkbox">
+      <img class="team-listing--item--mug" src="{{image}}" alt="Image of {{first-name}} {{last-name}}, {{title}} at Sparkbox">
 
-    {{#if overlay-text }}</div>{{/if}} {{!-- closes .team-listing--item--overlay --}}
+      {{#if overlay-text }}</div>{{/if}} {{!-- closes .team-listing--item--overlay --}}
 
-    <div class="team-listing--item--name-wrapper">
-      <h3 class="team-listing--item--name">
-        <span class="team-listing--item--first-name">{{first-name}}</span> 
-        <span class="team-listing--item--last-name">{{last-name}}</span>
-      </h3>
-      <small class="team-listing--item--title">{{title}}</small>
-    </div>
-  {{#unless overlay-text}}</a>{{/unless}}
-</div>
+      <div class="team-listing--item--name-wrapper">
+        <h3 class="team-listing--item--name">
+          <span class="team-listing--item--first-name">{{first-name}}</span> 
+          <span class="team-listing--item--last-name">{{last-name}}</span>
+        </h3>
+        <small class="team-listing--item--title">{{title}}</small>
+      </div>
+  </div>
+
+{{#unless overlay-text}}</a>{{/unless}}
