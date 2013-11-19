@@ -1,9 +1,9 @@
 hero:
   hero-first-content: |
-    <h1 class="hero--main-header"">A Principled Team Devoted to a Web Built Right</h1>
-    <p class="hero--body">The only real thing we have to offer is us. It's not what we do—it's how we do it.</p>
+    <h1>A Principled Team Devoted to a Web Built Right</h1>
+    <p>The only real thing we have to offer is us. It's not what we do—it's how we do it.</p>
   hero-second-content: |
-    <ul class="hero--list">
+    <ul>
       <li>Prioritize People</li>
       <li>Never Stop Learning</li>
       <li>Collaborate Constantly</li>
