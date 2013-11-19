@@ -5,8 +5,6 @@
   position: relative;
   clear: left;
   @extend %clearfix;
-  display: flex;
-  align-items: center;
 
   @include sb-media( $bp-layout-small ) {
     display: block;
@@ -59,33 +57,39 @@
   }
 }
 
-.team-listing--item--overlay {
-  @extend %clearfix;
-  position: relative;
-}
-
 .team-listing--item--overlay--text {
   @include rem( font-size, .8 );
+  clear: both;
+  background-color: $c-bg-primary;
+  font-weight: bold;
   letter-spacing: 3px;
   text-align: center;
   color: #FFF;
   text-transform: uppercase;
+  padding: 1em 0.8em;
 
-  // horizontal + vertical positioning:
-  width: 46%;
-  height: 50%;
-  overflow: visible;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  @include sb-media( $bp-layout-small ) {
+    background-color: transparent;
+    position: absolute;
+    clear: none;
+
+    // horizontal and vertical positioning
+    width: 80%;
+    margin: auto;
+    top: 15%;
+    left: 0;
+    right: 0;
+  }
 
   a {
+    display: block;
     color: white;
     text-decoration: underline;
   }
 
   p {
     line-height: 1.5;
+    margin: 0;
 
     @include sb-media( $bp-layout-medium ) {
       line-height: 2.5;  
@@ -99,7 +103,6 @@
 
   .team-listing li:nth-of-type(even) & {
     float: right;
-    order: 2; // instructions for the flexbox model
   }
 
   @include sb-media( $bp-layout-small ) {
@@ -117,6 +120,8 @@
   float: left;
   width: 70%;
   position: relative;
+  margin-top: 6%;
+  z-index: 1;
 
   &:before {
     @include transition(position, .25s);
@@ -126,6 +131,7 @@
     border-width: 1.9em;
     left: -2.5em;
     position: absolute;
+    z-index: -1;
 
     .team-listing--item:hover & {
       left: -3.1em;
@@ -147,12 +153,17 @@
     right: -3.1em;
   }
 
+  @include sb-media( 25em ) {
+    margin-top: 6.2%;
+  }
+
   @include sb-media( $bp-layout-small ) {
     background: #fff;
     clear: left;
     padding: 1.2em .5em 1.3em;
     float: none;
     width: auto;
+    margin-top: 0;
 
     &:before {
       // The zealous use of !important here
@@ -213,10 +224,11 @@
 
 .team-listing--item--last-name {
   @include rem( font-size, 1.2 );
-  margin-top: .3em;
+  margin-top: 0.1em;
 
   @include sb-media( 28em ) {
     @include rem( font-size, 1.6 );
+    margin-top: .3em;
   }
 
   @include sb-media( $bp-layout-small ) {
@@ -232,9 +244,14 @@
   @include rem( font-size, .6 );
   color: $c-tx-light;
   text-transform: uppercase;
-  margin-top: .7em;
+  margin-top: .4em;
   display: block;
   letter-spacing: 2px;
+  line-height: 1.2;
+
+  @include sb-media( 28em ) {
+    margin-top: .9em;
+  }
   
   @include sb-media( $bp-layout-small ) {
     @include rem( font-size, .7 );
