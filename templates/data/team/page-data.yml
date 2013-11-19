@@ -33,7 +33,7 @@ team-listing:
     anchor: "#"
   - first-name: Drew
     last-name: Clemens
-    title: Director of User Experience
+    title: Director of UX
     image: img/drew-clemens.jpg
     anchor: "#"
   - first-name: Rob

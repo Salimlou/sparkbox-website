@@ -4,6 +4,10 @@
   ul {
     @extend %remove-list-styles;
   }
+
+  li {
+    position: relative;
+  }
 }
 
 .team-listing a {
