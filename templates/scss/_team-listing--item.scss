@@ -1,3 +1,10 @@
+/*
+A single team member entry for the "Team" page. 
+Contains an image, name, and title.
+
+Styleguide 1.6
+*/
+
 .team-listing--item {
   @extend %font-primary;
   background: #fff;
