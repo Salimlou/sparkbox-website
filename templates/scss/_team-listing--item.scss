@@ -231,8 +231,16 @@
     margin-top: .3em;
   }
 
-  @include sb-media( $bp-layout-small ) {
+  @include sb-media( $bp-layout-small) {
     @include rem( font-size, 1.2 );
+  }
+
+  @include sb-media( $bp-layout-small + 3) {
+    @include rem( font-size, 1.6 );
+  }
+
+  @include sb-media( $bp-layout-medium  ) {
+    @include rem( font-size, 1.3 );
   }
 
   @include sb-media( $bp-layout-medium + 3 ) {
