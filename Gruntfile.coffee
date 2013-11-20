@@ -74,6 +74,11 @@ module.exports = (grunt) ->
           data: "data/index/*.yml"
         src: "partials/index.hbs"
         dest: "dist/index.html"
+      foundry_listing:
+        options:
+          data: "data/foundry-listing/*.yml"
+        src: "partials/foundry-listing.hbs"
+        dest: "dist/foundry-listing.html"
       foundry_entry:
         options:
           data: "data/foundry-entry/*.yml"
