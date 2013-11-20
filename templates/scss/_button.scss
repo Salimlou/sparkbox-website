@@ -1,9 +1,45 @@
-%button {
+/*
+Button
+
+Apply these classes to elements that should appear as buttons.
+
+.button--standard     - Default button
+
+Styleguide 1.6
+*/
+
+$c--standard-fg: #b3e1e8;
+$c--standard-bg: #265e67;
+
+.button {
+  // Remove default button styles
+  border: none;
+  margin: 0;
+
+  @extend %font-primary;
+  font-weight: lighter;
+
   cursor: pointer;
-  color: #b3e1e8;
-  background-color: #265e67;
 }
 
-.button--standard {
-  @extend %button;
+.button_standard {
+  padding: 0.5em 0.8em;
+  border-radius: $length--border-radius;
+  font-size: 0.9em;
+
+  color: $c--standard-fg;
+  background-color: $c--standard-bg;
+
+  &:hover {
+    color: tint($c--standard-fg, 40%);
+    background-color: shade($c--standard-bg, 40%);
+  }
+}
+
+.button_inline {
+  display: inline-block;
+}
+
+.button_full {
+  display: block;
 }
