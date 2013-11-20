@@ -59,7 +59,6 @@
 <h4>Principled Work: It's more than just work. It's who we are.</h4>
 
   <p>Our convictions drive our work, and they affect how we accept projects and build client relationships. </p>  
-  <p>The way we build reflects what we believe, who we wish to be, and why we get up in the morning.</p>
   <!--Have the featured work term and definition appear on the same line -->
   <dl>
     <dt>Build Right:</dt>
