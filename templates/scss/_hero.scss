@@ -16,28 +16,27 @@ Styleguide 1.3
 
 .hero {
   @extend %clearfix;
-}
 
-.hero--main-header {
-  @include rem(font-size, 1.9);
+  h1, h2 {
+    @include rem(font-size, 1.9);
+    color: $c-tx-light3x;
+    line-height: 1.4;
+  }
 
-  color: $c-tx-light3x;
-  line-height: 1.4;
-}
+  p {
+    @include rem(font-size, 1.5);
+    color: $c-tx-light2x;
+    font-weight: lighter;
+    margin-bottom: 0;
+  }
 
-.hero--body {
-  @include rem(font-size, 1.5);
-  color: $c-tx-light2x;
-  font-weight: lighter;
-  margin-bottom: 0;
-}
-
-.hero--list {
-  @extend %remove-list-styles;
-  @extend %font-primary;
-  @include rem(font-size, 1.2);
-  color: $c-tx-light3x;
-  line-height: 1.9;
+  ul {
+    @extend %remove-list-styles;
+    @extend %font-primary;
+    @include rem(font-size, 1.2);
+    color: $c-tx-light3x;
+    line-height: 1.9;
+  }
 }
 
 .hero--first-content {
