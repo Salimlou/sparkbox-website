@@ -76,15 +76,13 @@
   <h3>What You'll Receive</h3>
   <dl>
   <dt>Honesty and Experience</dt>
-      <dd>We've been doing this for a long time, and we want you to benefit from our experience. Our goal is to make your project successful, and if it takes a little bit of tough love and honesty to guide you down a more fruitful path, we're willing to say what needs to be said. We expect the same honesty from our clients when solving problems together.</dd>
-    <dt>Capped Hourly Work</dt>
-      <dd>We've found that fixed-price projects don't serve our clients&mdash;or us&mdash;very well. Working hourly (with a cap on the maximum number of hours) allows us to be flexible as project needs change and creates stronger, more collaborative projects. Our clients are happier with the results, and we're glad to be paid only for the work we've done.</dd>
-    <dt>Initial Engagements</dt>
-      <dd>Every project has a life cycle. The most challenging and confusing phase is its birth. With a relatively small initial contract, we've found we can gain an immense amount of knowledge and perspective on new projects. We can then produce really useful planning, project scope, and resource estimates for how to solve your problem.</dd>
-      <dd>Our clients can take this knowledge and implement elsewhere, if they choose. Should they decide to continue working with us, we're in an infinitely better place to begin work.</dd>
-    <dt>New and Iterative Processes</dt>
-      <dd>We do our best to work in a way that makes good use of our clients' budgets and our time. We've found working iteratively and tackling smaller chunks of a larger solution leads to even better projects. Seeking the most efficient avenues for a project can lead to unique processes. This is something we ask our clients to be comfortable with. We'll help you understand why we do what we do, and we think you'll enjoy the fresh outlook.</dd>
-    <dt>People Excited to Build for You and Your Users</dt>
+      <dd>Our goal is to make your project successful. We've been doing this for a long time, and we’ll say what needs to be said to guide you down a fruitful path. We expect the same honesty from you when solving problems together.</dd>
+    <dt>New, Iterative Processes /dt>
+      <dd>Tackling smaller chunks of a larger solution leads to better projects. Working effectively and efficiently can also lead to unique processes. We'll help you understand why we do what we do, and we think you'll enjoy the fresh outlook.</dd>
+    <dt>Optional Initial Engagements </dt>
+      <dd>Small starter projects let us produce powerful planning, scope, and resource estimates to solve problems. Our clients are free to implement that knowledge elsewhere. If they continue working with us, we're able to hit the ground coding.</dd>
+    <dt>Collaborative Hourly Work</dt>
+      <dd>Working hourly (with a cap on the maximum number of hours) allows us to be flexible to changing needs and creates more collaborative projects. Our clients are happier with the results, and we're glad to be paid only for the work we've done.</dd>
   </dl>
 </section>
 
