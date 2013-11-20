@@ -14,7 +14,8 @@
   </header>
 
   <section> 
-    <h1>Work</h1>
+    <h1>How We Build Is Who We Are</h1>
+    <p>The way we build reflects what we believe, who we wish to be, and why we get up in the morning.</p>
   </section>
   
   <section> 
