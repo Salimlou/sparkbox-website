@@ -1,8 +1,0 @@
-@import "reset";
-@import "mixins";
-@import "smallest";
-
-@import "build-header"; // Heads up: build-header has self-contained media queries
-
-// List all resolution styles you wish to serve to IE here
-@import "smallest";
