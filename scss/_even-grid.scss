@@ -5,6 +5,25 @@ $bp-evenGrid-4col: 90em;
 $base-ratio: 80.27%;
 $item-inner-padding: 0.9em;
 
+@mixin even-grid--font-resize($bps...){
+  // This generates new font sizes in media queries
+  // for even-grid text elements.
+  // Since this generates media queries, for best results,
+  // don't put this in a media query,
+  // as it would otherwise create some weird combined media queries
+  @each $bp in $bps {
+    @include sb-media($bp) {
+      font-size: 1em;
+    }
+    @include sb-media($bp + 10) {
+      font-size: 1.3em;
+    }
+    @include sb-media($bp + 18) {
+      font-size: 1.6em;
+    }
+  }
+}
+
 .even-grid {
   // Reset list styles
   list-style: none;
@@ -44,9 +63,10 @@ $item-inner-padding: 0.9em;
 }
 
 .even-grid--item-inner-wrapper {
-  @include sb-media($bp-evenGrid-2col) {
-    position: relative;
+  // contain absolute positioning
+  position: relative;
 
+  @include sb-media($bp-evenGrid-2col) {
     // Activate intrinsic ratio powers
     height: 0;
     padding-bottom: $base-ratio;
@@ -74,19 +94,33 @@ $item-inner-padding: 0.9em;
   }
 }
 
+.even-grid--title {
+  font-size: 1em;
+  content: "butts";
+}
+
+.even-grid--subtitle {
+  @extend %font-primary;
+  font-weight: lighter;
+  font-size: 1.3em;
+  @include even-grid--font-resize($bp-evenGrid-2col, $bp-evenGrid-3col, $bp-evenGrid-4col);
+}
+
 .even-grid--contents_has-image {
   // Remove padding,
-  // so image can touch bottom.
+  // so the image can touch the bottom.
   // Stop laughing.
   padding-bottom: 0;
 }
 
 .even-grid--image-wrapper {
+  margin-bottom: -$item-inner-padding;
+
   @include sb-media($bp-evenGrid-2col) {
     position: absolute;
     top: $item-inner-padding;
     left: $item-inner-padding;
-    bottom: 0;
+    bottom: $item-inner-padding;
     right: $item-inner-padding;
   }
 }
@@ -113,4 +147,26 @@ $item-inner-padding: 0.9em;
     left: 0;
     right: 0;
   }
+}
+
+.even-grid--button-wrapper {
+  @include sb-media($bp-evenGrid-2col) {
+    position: absolute;
+    bottom: 2em;
+
+    // stretch out to allow centered button
+    left: 0;
+    right: 0;
+  }
+}
+
+.even-grid--button-wrapper_with-image {
+  // same styles as media query, but without media query
+
+  position: absolute;
+  bottom: 2em;
+
+  // stretch out to allow centered button
+  left: 0;
+  right: 0;
 }
