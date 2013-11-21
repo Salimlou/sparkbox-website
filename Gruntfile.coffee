@@ -206,7 +206,7 @@ module.exports = (grunt) ->
   # Production task
   grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "watch"]
 
-  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble" ]
+  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "sg" ]
 
   # Default task
   grunt.registerTask "default", "dev"
