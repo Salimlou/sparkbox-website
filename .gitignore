@@ -14,8 +14,10 @@ dist/*
 js/*
 specs/js/*
 reports/*
-reports/**/
+public/css/fonts/vendor/*
 
 # We don't want to check in packages
 node_modules/*
-*.ttf
+
+# Don't check in fonts, because of copyrights
+public/css/fonts/*

@@ -1,39 +1,50 @@
+require 'mina/bundler'
+require 'mina/git'
 
-##### Settings #####
+set :domain, '173.203.111.48'
+set :deploy_to, '/var/www/html/seesparkbox.sparkboxqa.com'
+set :repository, 'git@github.com:sparkbox/sparkbox-website.git'
+set :branch, 'master'
+# Using ssh agent forwarding, using our local credentials to checkout from Github:
+set :ssh_options, '-A'
 
-# the name of your website - should also be the name of the directory
-set :application, "building.seesparkbox.com"
+# Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
+# They will be linked in the 'deploy:link_shared_paths' step.
+set :shared_paths, ['log']
 
-# the url that maps to the server - in staging this could be different that the application name
-set :application_url, "building.seesparkbox.com"
+# This task is the environment that is loaded for most commands, such as
+# `mina deploy` or `mina rake`.
+task :environment do
+  # If you're using rbenv, use this to load the rbenv environment.
+  # Be sure to commit your .rbenv-version to your repository.
+  # invoke :'rbenv:load'
 
-# the path to your new deployment directory on the server
-# by default, the name of the application (e.g. "/var/www/sites/example.com")
-set :deploy_to, "/var/www/html/#{application}"
+  # For those using RVM, use this to load an RVM version@gemset.
+  # invoke :'rvm:use[ruby-1.9.3-p125@default]'
+end
 
-# the git-clone url for your repository
-set :repository, "git@github.com:sparkbox/sparkbox-website.git"
+task :setup => :environment do
+  queue! %[mkdir -p "#{deploy_to}/shared/log"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
 
-# the branch you want to clone (default is master)
-set :branch, "master"
+  queue! %[mkdir -p "#{deploy_to}/shared/config"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
+end
 
-# the name of the deployment user-account on the server
-set :user, "root"
+desc "Deploys the current version to the server."
+task :deploy => :environment do
+  deploy do
+    # Put things that will set up an empty directory into a fully set-up
+    # instance of your project.
+    invoke :'git:clone'
+    invoke :'deploy:link_shared_paths'
+    invoke :'bundle:install'
 
-ssh_options[:forward_agent] = true
-
-##### You shouldn't need to edit below unless you're customizing #####
-
-# Additional SCM settings
-set :scm, :git
-set :ssh_options, { :forward_agent => true }
-set :deploy_via, :remote_cache
-set :copy_strategy, :checkout
-set :keep_releases, 3
-set :use_sudo, false
-set :copy_compression, :bz2
-
-# Roles
-role :app, "#{application_url}"
-role :web, "#{application_url}"
-role :db,  "#{application_url}", :primary => true
+    to :launch do
+      queue "npm install"
+      queue "grunt dist"
+      queue "ln -s #{deploy_to}/shared/fonts dist/css/fonts"
+      queue "touch #{deploy_to}/tmp/restart.txt"
+    end
+  end
+end

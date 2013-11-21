@@ -1,0 +1,70 @@
+/*
+This module is a sort of subheader that apears on the pages of the Foundry, just below the primary site-header.
+This header typically contains options for visitors to choose their
+reading style.
+
+Styleguide 1.2
+*/
+
+.foundry-header {
+  background-color: $c-bg-primaryLight2x;
+}
+
+.foundry-header--list {
+  @extend %remove-list-styles;
+  display: table;
+  width: 100%;
+  max-width: 64em;
+  @include sb-media(45em) {
+    margin: 0 auto;
+    display: block;
+    width: auto;
+  }
+}
+
+.foundry-header--list-item {
+  vertical-align: middle;
+  width:50%;
+  display: table-cell;
+  padding: 1em .5em 1.5em;
+  @include sb-media(45em) {
+    @include inline(top);
+    width: auto;
+    margin-left: 25%;
+    & + & {
+      margin-left: 0;
+    }
+  }
+}
+
+.foundry-header--link {
+  @extend %font-primary;
+  color: $c-tx-dark;
+  font-size: 1.1875em;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: .5em .75em;
+  position: relative;
+  @include sb-media(45em) {
+    padding: .5em 1.125em;
+  }
+}
+
+.foundry-header--link:hover,
+.foundry-header--link_is-selected {
+  background-color: $c-bg-primaryLight;
+  @include sb-media(45em) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 45%;
+      @include transform(rotate(45deg));
+      width: .875em;
+      height: .875em;
+      background-color: $c-bg-primaryLight;
+    }
+  }
+}

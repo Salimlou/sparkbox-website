@@ -1,0 +1,79 @@
+.layout--container {
+  max-width: $bp-siteMaxWidth;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include sb-media( $bp-siteMaxWidth + 5 ) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.layout--left {
+  float: left;
+}
+
+.layout--right {
+  float: right;
+}
+
+.layout--horizontal-space {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.layout--vertical-space {
+  margin-top: 1em;
+
+  @include sb-media( 45em ) {
+    margin-top: 2.5em;
+  }
+}
+
+.layout--vertical-space-2x {
+  margin-top: 2em;
+
+  @include sb-media( 45em ) {
+    margin-top: 3em;
+  }
+}
+
+.layout--vertical-space-3x {
+  margin-top: 3em;
+
+  @include sb-media( 45em ) {
+    margin-top: 7.5em;
+  }
+}
+
+.layout--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout--allows-right-sidebar {
+  @include sb-media( $bp-layout-medium ) {
+    width: 68%;
+    float: left;
+  }
+}
+
+.layout--right-sidebar {
+  @include sb-media( $bp-layout-medium ) {
+    width: 25%;
+    float: right;
+  }
+}
+
+
+// Naming experiment
+
+.layout--bump-left-at-medium{
+  @include sb-media( $bp-layout-medium ){
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+}
