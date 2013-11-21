@@ -34,6 +34,13 @@ window.APP =
           $(this).nextUntil(".foundry-article--expandable-header").wrapAll "<div class=\"foundry-article--expandable-content\"></div>"
         # Adds a "Introduction" header to the first wrapped content that lacks a header.
         $(".foundry-article--expandable-content").first().before "<div class=\"foundry-article--expandable-header foundry-article--added-header\">Introduction</div>"
+
+      resizeText = ->
+        if $().fitText
+          $("[data-fittext-compression]").each ->
+            $this = $(this)
+            compression = $this.data("fittext-compression")
+            $this.fitText(compression)
       
       # Setup the markup when the document is ready.
       $(document).ready ->
@@ -62,5 +69,6 @@ window.APP =
               $(".foundry-article--expandable-header").each ->
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
+        resizeText()
 
 APP.common.init()
