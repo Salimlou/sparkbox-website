@@ -1,0 +1,66 @@
+.foundry--entries{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.foundry--item{
+  @include rem(margin-bottom, 1);
+  border-bottom: 1px solid #ccc;
+  @include sb-media(45em){
+    @include rem(margin-bottom, 2.75);
+    float: left;
+    border-bottom: none;
+  }
+}
+.foundry--thumb{
+  width: 100%;
+  height: auto;
+  @include sb-media(45em){
+    width: 20%;
+    float: left;
+  }
+}
+.foundry--header{
+  @include sb-media(45em){
+    @include rem(max-width, 43);
+    margin-left: 25%;
+    margin-bottom: 0;
+    width: 75%;
+  }
+}
+.foundry--title{
+  @include rem(margin, .5, 0);
+  @include sb-media(25em) {
+    @include rem(font-size, 2.25);
+  }
+  @include sb-media(45em){
+    @include rem(font-size, 2.5);
+    margin: 0;
+    width: 75%;
+  }
+}
+.foundry--meta-item{
+  @extend %font-primary;
+  @include rem(font-size, .75);
+  @include rem(margin, .75, 0);
+  color: $c-tx-light;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include sb-media(45em){
+    @include rem(margin, .5, 0, 0, 0)
+  }
+}
+.foundry--summary{
+  @include sb-media(45em){
+    margin-left: 25%;
+    margin-bottom: 0;
+    width: 75%;
+  }
+}
+.foundry--summary-body{
+  @include rem(margin, .5, 0, 1, 0);
+  @include sb-media(45em){
+    @include rem(font-size, 1.25);
+    max-width: 95%;
+  }
+}
