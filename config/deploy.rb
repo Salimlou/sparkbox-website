@@ -43,6 +43,7 @@ task :deploy => :environment do
     to :launch do
       queue "npm install"
       queue "grunt dist"
+      queue "ln -s #{deploy_to}/shared/fonts dist/css/fonts"
       queue "touch #{deploy_to}/tmp/restart.txt"
     end
   end
