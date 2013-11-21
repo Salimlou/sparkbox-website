@@ -4,8 +4,6 @@
 
 <main>
 
-  <span class="button button_standard button_inline">something</span>
-
   <section>
 
 
@@ -15,12 +13,12 @@
       <a href="{{ url }}" title="Read more about {{ title }}">
 
         <div class="even-grid--item-inner-wrapper">
-          <div class="even-grid--contents {{#if image}}even-grid--contents_has-image{{/if}}">
+          <div class="even-grid--contents">
 
-            <h2>{{ title }}</h2>
+            <h2 class="even-grid--title">{{ title }}</h2>
 
             {{#if headline}}
-              <p>{{ headline }}</p>
+              <p class="even-grid--subtitle">{{ headline }}</p>
             {{/if}}
 
             {{#if image}}
@@ -28,6 +26,11 @@
               <img class="even-grid--image" src="{{ image }}" alt="{{ image_alt }}" />
             </div>
             {{/if}}
+
+            <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
+              <span class="button button_standard button_inline">Read More</span>
+            </div>
+
 
           </div>
         </div>

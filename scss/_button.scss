@@ -25,7 +25,6 @@ $c--standard-bg: #265e67;
 .button_standard {
   padding: 0.5em 0.8em;
   border-radius: $length--border-radius;
-  font-size: 0.9em;
 
   color: $c--standard-fg;
   background-color: $c--standard-bg;
@@ -50,4 +49,9 @@ $c--standard-bg: #265e67;
 
 .button_has-external-icon {
   // add specific icon for external links
+}
+
+.button_large {
+  // larger font size
+  font-size: 1.2em;
 }
