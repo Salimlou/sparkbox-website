@@ -1,7 +1,15 @@
 # When you change APP, be sure to update it in mylibs/util.js
 window.APP =
 
-  #methodName: ->
+  evenGrid:
+    init: ->
+      $evenGrid = $('.even-grid') 
+      if $evenGrid.length > 0
+        $evenGrid.on('click', '.even-grid--contents', ->
+          $(this).toggleClass('even-grid--contents_is-active');
+        )
+      else
+        console.log "No even grid here. Move along."
 
   # Initializers
   common:
@@ -70,5 +78,6 @@ window.APP =
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
         resizeText()
+        APP.evenGrid.init()
 
 APP.common.init()
