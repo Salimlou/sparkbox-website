@@ -6,7 +6,6 @@
 
   <section>
 
-
   <ol class="even-grid">
     {{#each work-items}}
       <li class="even-grid--item">
@@ -18,7 +17,7 @@
             <h2 class="even-grid--title" data-fittext-compression="1.7">{{ title }}</h2>
 
             {{#if headline}}
-              <p class="even-grid--subtitle" data-fittext-compression="1.7">{{ headline }}</p>
+              <p class="even-grid--subtitle {{#if image}}even-grid--subtitle_with-image{{/if}}" data-fittext-compression="1.7">{{ headline }}</p>
             {{/if}}
 
             {{#if image}}
@@ -28,7 +27,7 @@
             {{/if}}
 
             <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
-              <span class="button button_standard button_inline">Read More</span>
+              <span class="button button_standard-hidden button_inline">Read More</span>
             </div>
 
 
