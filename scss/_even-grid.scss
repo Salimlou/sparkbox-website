@@ -5,6 +5,8 @@ $bp-evenGrid-4col: 90em;
 $base-ratio: 80.27%;
 $item-inner-padding: 0.9em;
 
+$hover-class: "even-grid--contents";
+
 @mixin even-grid--font-resize($bps...){
   // This generates new font sizes in media queries
   // for even-grid text elements.
@@ -74,12 +76,19 @@ $item-inner-padding: 0.9em;
 }
 
 .even-grid--contents {
-  @include transition(all 0.1s);
+  @include quick-transition;
+
+  // Force element to be on composite layer,
+  // prevent flicker
+  @include transform(translate3d(0,0,0));
 
   padding: $item-inner-padding;
   border: 0.6em solid white;
   background-color: $c-bg-primaryLight;
   color: $c-tx-dark;
+
+  // Cut off sliding image
+  overflow: hidden;
 
   // IE7 doesn't want to show a pointer
   // cursor since the <a> is around a block-level
@@ -132,6 +141,12 @@ $item-inner-padding: 0.9em;
 }
 
 .even-grid--image {
+  @include quick-transition;
+
+  // Force element to be on composite layer,
+  // prevent flicker
+  @include transform(translate3d(0,0,0));
+
   width: 100%;
   max-width: 25em;
 
@@ -152,6 +167,10 @@ $item-inner-padding: 0.9em;
     // Center absolute element
     left: 0;
     right: 0;
+  }
+
+  .#{$hover-class}:hover & {
+    @include transform( translate3d(0, 100%, 0));
   }
 }
 

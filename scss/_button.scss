@@ -41,7 +41,7 @@ $c--standard-dark: $c-tx-dark;
   // It is exposed through a hover.
 
   // Nice little fade in
-  @include transition(all 0.1s);
+  @include quick-transition;
 
   padding: 0.5em 0.8em;
   border-radius: $length--border-radius;
