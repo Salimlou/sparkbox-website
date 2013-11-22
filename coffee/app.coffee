@@ -5,7 +5,20 @@ window.APP =
     init: ->
       $evenGrid = $('.even-grid') 
       if $evenGrid.length > 0
-        $evenGrid.on('click', '.even-grid--contents', ->
+        $evenGrid.on('click', '.even-grid--contents', (ev) ->
+
+          $target = $(ev.target)
+          
+
+          if $target.is('.even-grid--contents_is-active a')
+            # If we click a link in an active item,
+            # don't toggle the "active-ness", because that's ugly
+            return
+          else
+            # If we click a link in a not-active item,
+            # don't go to it, because it was just a coincidence
+            ev.preventDefault()
+
           $(this).toggleClass('even-grid--contents_is-active');
         )
       else
