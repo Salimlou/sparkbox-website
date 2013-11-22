@@ -121,6 +121,12 @@ $hover-class: "even-grid--contents";
   @include even-grid--font-resize($bp-evenGrid-2col, $bp-evenGrid-3col, $bp-evenGrid-4col);
 }
 
+.even-grid--subtitle_with-image {
+  @include sb-media($bp-evenGrid-2col) {
+  color: $c-bg-primaryLight;
+  }
+}
+
 .even-grid--contents_has-image {
   // Remove padding,
   // so the image can touch the bottom.
@@ -130,6 +136,10 @@ $hover-class: "even-grid--contents";
 
 .even-grid--image-wrapper {
   margin-bottom: -$item-inner-padding;
+
+  // Place above button
+  position: relative;
+  z-index: 1;
 
   @include sb-media($bp-evenGrid-2col) {
     position: absolute;

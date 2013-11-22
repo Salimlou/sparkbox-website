@@ -19,7 +19,7 @@
             <h2 class="even-grid--title" data-fittext-compression="1.7">{{ title }}</h2>
 
             {{#if headline}}
-              <p class="even-grid--subtitle" data-fittext-compression="1.7">{{ headline }}</p>
+              <p class="even-grid--subtitle {{#if image}}even-grid--subtitle_with-image{{/if}}" data-fittext-compression="1.7">{{ headline }}</p>
             {{/if}}
 
             {{#if image}}
