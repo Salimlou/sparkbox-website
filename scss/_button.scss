@@ -8,8 +8,8 @@ Apply these classes to elements that should appear as buttons.
 Styleguide 1.6
 */
 
-$c--standard-fg: #b3e1e8;
-$c--standard-bg: #265e67;
+$c--standard-light: $c-bg-primaryLight;
+$c--standard-dark: $c-tx-dark;
 
 .button {
   // Remove default button styles
@@ -26,12 +26,33 @@ $c--standard-bg: #265e67;
   padding: 0.5em 0.8em;
   border-radius: $length--border-radius;
 
-  color: $c--standard-fg;
-  background-color: $c--standard-bg;
+  color: $c--standard-light;
+  background-color: $c--standard-dark;
 
   &:hover {
-    color: tint($c--standard-fg, 40%);
-    background-color: shade($c--standard-bg, 40%);
+    color: tint($c--standard-light, 40%);
+    background-color: shade($c--standard-dark, 40%);
+  }
+}
+
+.button_standard-hidden {
+  // A button that is meant to be put
+  // on something of the same color.
+  // It is exposed through a hover.
+
+  // Nice little fade in
+  @include transition(all 0.1s);
+
+  padding: 0.5em 0.8em;
+  border-radius: $length--border-radius;
+
+  color: $c--standard-dark;
+  background-color: $c--standard-light;
+  opacity: 0;
+
+  &:hover,
+  .even-grid--contents:hover & {
+    opacity: 1;
   }
 }
 

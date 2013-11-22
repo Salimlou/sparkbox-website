@@ -74,15 +74,22 @@ $item-inner-padding: 0.9em;
 }
 
 .even-grid--contents {
+  @include transition(all 0.1s);
+
   padding: $item-inner-padding;
   border: 0.6em solid white;
-  background-color: #B6E1E8;
-  color: #265e67;
+  background-color: $c-bg-primaryLight;
+  color: $c-tx-dark;
 
   // IE7 doesn't want to show a pointer
   // cursor since the <a> is around a block-level
   // element, so let's force it.
   cursor: pointer;
+
+  &:hover {
+    background-color: $c-tx-dark;
+    color: $c-bg-primaryLight;
+  }
 
   @include sb-media($bp-evenGrid-2col) {
     // Activate intrinsic ratio powers
@@ -96,7 +103,6 @@ $item-inner-padding: 0.9em;
 
 .even-grid--title {
   font-size: 1em;
-  content: "butts";
 }
 
 .even-grid--subtitle {
