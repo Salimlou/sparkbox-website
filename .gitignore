@@ -11,7 +11,7 @@ tmp/*
 dist/*
 .sass-cache/*
 .grunt/*
-js/*
+js/*.js
 specs/js/*
 reports/*
 public/css/fonts/vendor/*
