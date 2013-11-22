@@ -43,6 +43,11 @@ $c--standard-dark: $c-tx-dark;
   // Nice little fade in
   @include quick-transition;
 
+  // Force element to be on composite layer,
+  // prevent flicker
+  @include transform(translate3d(0,0,0));
+
+
   padding: 0.5em 0.8em;
   border-radius: $length--border-radius;
 
