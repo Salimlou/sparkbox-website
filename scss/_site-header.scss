@@ -32,11 +32,11 @@ Styleguide 1.1
   &:before {
     color: #fff;
     font-size: 2.375em;
-    @include sb-media(36em) {
+    @include sb-media(38em) {
       font-size: 3.125em;
     }
   }
-  @include sb-media(36em) {
+  @include sb-media(38em) {
     width: 80px;
     height: 80px;
   }
@@ -53,7 +53,7 @@ Styleguide 1.1
   font-size: 1.6875em;
   text-align: center;
   position: relative;
-  @include sb-media(36em) {
+  @include sb-media(38em) {
     display: table-cell;
     height: 80px;
     // width: 180px;
@@ -62,28 +62,16 @@ Styleguide 1.1
 }
 
 .site-nav {
-  @include rem(padding-top, 1.15);
-  @include rem(margin-right, .5);
-  display: table;
-  float:right;
-  // height: 60px;
-  @include sb-media(36em) {
-    @include rem(padding-top, 1.5625);
-    // height: 80px;
+  @include sb-media(38em) {
+
   }
 }
 .nav-button {
   @include rem(letter-spacing, .2);
+  @include rem(margin, 1.15, .5, 0, 0);
   text-decoration: none;
-  display: table;
-  // height: 60px;
-  // &:hover {
-  //   background: lighten($c-bg-darkGray,10%);
-  // }
-  // &:active {
-  //   background: darken($c-bg-darkGray,10%);
-  // }
-  @include sb-media(36em) {
+  float: right;
+  @include sb-media(38em) {
     display: none;
   }
 }
@@ -112,37 +100,110 @@ Styleguide 1.1
 }
 
 .site-nav--list {
+  @include rem(padding, .5, .5, 2.5, .5);
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: none;
-  @include sb-media(36em) {
-    display: table;
-    // height: 80px;
+  clear: both;
+  background: rgba(199, 236, 242, 1);
+  @include sb-media(38em) {
+    @include rem(margin, 1.75, 1, 0, 0);
+    padding: 0;
+    display: inline;
+    background: none;
+    float: right;
+    clear: none;
   }
 }
 
 .site-nav--item {
-  display: table-cell;
-  text-align: center;
   vertical-align: middle;
   line-height: 1em;
+  @include sb-media(38em) {
+    display: inline;
+    text-align: center;
+  }
 }
 
 .site-nav--link {
   @extend %font-primary;
-  display: block;
+  display: inline-block;
   @include rem(padding, .5, .75);
-  color: white;
-  font-size: .8125em;
+  color: $c-tx-dark;
+  font-size: 1.75em;
   font-weight: 700;
   letter-spacing: .125em;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1em;
-  &:hover {
-    border: 3px solid white;
-    border: .1875rem solid white;
-    @include rem(padding, .3125, .5625);
+  @include sb-media(38em){
+    @include rem(margin, 0, .75);
+    @include rem(padding, 0, 0, .25, 0);
+    font-size: .8125em;
+    color: #fff;
+    &:hover {
+      border-bottom: 3px solid white;
+    }
   }
+}
+
+.site-nav--contact-info{
+  @include rem(margin, 1.5, 0, 0, 0);
+  list-style-type: none;
+  padding: 0;
+  @include sb-media(38em){
+    display: none;
+  }
+}
+.site-nav--contact-info-item{
+  @include rem(padding, 1, 0);
+  @include rem(margin-left, .75);
+  font-family: "Avenir", helvetica, sans-serif;
+  color: $c-tx-dark;
+  display: inline;
+  background: #8DCFDA;
+  text-transform: uppercase;
+}
+.site-nav--contact-info-link{
+  @include rem(padding, 1);
+}
+
+.site-nav--highlight{
+  .site-nav--link{
+    @include rem(padding, .5);
+    background: $c-bg-primaryLight;
+    color: $c-tx-dark;
+    position: relative;
+    &:after{
+     bottom: 100%;
+     left: 50%;
+     border: solid transparent;
+     content: " ";
+     height: 0;
+     width: 0;
+     position: absolute;
+     pointer-events: none;
+     border-color: rgba(163, 218, 227, 0);
+     border-bottom-color: #a3dae3;
+     border-width: 7px;
+     margin-left: -7px;
+   }
+   &:hover{
+    border-bottom: none;
+    background: $c-bg-primaryLight3x;
+    &:after{
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: transparent;
+      border-bottom-color: $c-bg-primaryLight3x;
+      border-width: 7px;
+      margin-left: -7px;
+    }
+  }
+}
 }
