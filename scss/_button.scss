@@ -1,9 +1,83 @@
-%button {
+/*
+Button
+
+Apply these classes to elements that should appear as buttons.
+
+.button--standard     - Default button
+
+Styleguide 1.6
+*/
+
+$c--standard-light: $c-bg-primaryLight;
+$c--standard-dark: $c-tx-dark;
+
+.button {
+  // Remove default button styles
+  border: none;
+  margin: 0;
+
+  @extend %font-primary;
+  font-weight: lighter;
+
   cursor: pointer;
-  color: #b3e1e8;
-  background-color: #265e67;
 }
 
-.button--standard {
-  @extend %button;
+.button_standard {
+  padding: 0.5em 0.8em;
+  border-radius: $length--border-radius;
+
+  color: $c--standard-light;
+  background-color: $c--standard-dark;
+
+  &:hover {
+    color: tint($c--standard-light, 40%);
+    background-color: shade($c--standard-dark, 40%);
+  }
+}
+
+.button_standard-hidden {
+  // A button that is meant to be put
+  // on something of the same color.
+  // It is exposed through a hover.
+
+  // Nice little fade in
+  @include quick-transition;
+
+  // Force element to be on composite layer,
+  // prevent flicker
+  @include transform(translate3d(0,0,0));
+
+
+  padding: 0.5em 0.8em;
+  border-radius: $length--border-radius;
+
+  color: $c--standard-dark;
+  background-color: $c--standard-light;
+  opacity: 0;
+
+  &:hover,
+  .even-grid--contents:hover & {
+    opacity: 1;
+  }
+}
+
+.button_inline {
+  display: inline-block;
+}
+
+.button_full {
+  display: block;
+}
+
+.button_has-icon {
+  // add padding for icon
+}
+
+.button_has-external-icon {
+  // add specific icon for external links
+}
+
+.button_large {
+  // larger font size
+  font-size: 1.2em;
 }
