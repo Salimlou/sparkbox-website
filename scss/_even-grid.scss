@@ -2,10 +2,10 @@ $bp-evenGrid-2col: 40em;
 $bp-evenGrid-3col: 65em;
 $bp-evenGrid-4col: 90em;
 
-$base-ratio: 80.27%;
+$even-grid--base-ratio: 80.27%;
 $item-inner-padding: 0.9em;
 
-$hover-class: "even-grid--contents";
+$active-class: "even-grid--contents_is-active";
 
 @mixin even-grid--font-resize($bps...){
   // This generates new font sizes in media queries
@@ -71,7 +71,7 @@ $hover-class: "even-grid--contents";
   @include sb-media($bp-evenGrid-2col) {
     // Activate intrinsic ratio powers
     height: 0;
-    padding-bottom: $base-ratio;
+    padding-bottom: $even-grid--base-ratio;
   }
 }
 
@@ -95,11 +95,6 @@ $hover-class: "even-grid--contents";
   // element, so let's force it.
   cursor: pointer;
 
-  &:hover {
-    background-color: $c-tx-dark;
-    color: $c-bg-primaryLight;
-  }
-
   @include sb-media($bp-evenGrid-2col) {
     // Activate intrinsic ratio powers
     position: absolute;
@@ -109,6 +104,12 @@ $hover-class: "even-grid--contents";
     right: 0;
   }
 }
+
+.#{$active-class} {
+  background-color: $c-tx-dark;
+  color: $c-bg-primaryLight;
+}
+
 
 .even-grid--title {
   font-size: 1em;
@@ -148,6 +149,11 @@ $hover-class: "even-grid--contents";
     bottom: $item-inner-padding;
     right: $item-inner-padding;
   }
+
+  // Move out of the way for clicking buttons
+  .#{$active-class} & {
+    top: 100%;
+  }
 }
 
 .even-grid--image {
@@ -179,7 +185,7 @@ $hover-class: "even-grid--contents";
     right: 0;
   }
 
-  .#{$hover-class}:hover & {
+  .#{$active-class} & {
     @include transform( translate3d(0, 100%, 0));
   }
 }
