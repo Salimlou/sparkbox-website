@@ -55,8 +55,7 @@ $c--standard-dark: $c-tx-dark;
   background-color: $c--standard-light;
   opacity: 0;
 
-  &:hover,
-  .even-grid--contents:hover & {
+  .even-grid--contents_is-active & {
     opacity: 1;
   }
 }

@@ -1,7 +1,40 @@
 # When you change APP, be sure to update it in mylibs/util.js
 window.APP =
 
-  #methodName: ->
+  evenGrid:
+    init: ->
+      $evenGrid = $('.even-grid') 
+      if $evenGrid.length > 0
+        if Modernizr.touch
+          $evenGrid.on('click', '.even-grid--contents', APP.evenGrid.clickToggle)
+        else
+          $evenGrid.on('mouseenter', '.even-grid--contents', APP.evenGrid.hoverToggle)
+          $evenGrid.on('mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
+
+    hoverToggle: (ev) ->
+        $currentTarget = $(ev.currentTarget)
+        $currentTarget.toggleClass('even-grid--contents_is-active');
+
+    clickToggle: (ev) ->
+        $currentTarget = $(ev.currentTarget)
+        $target = $(ev.target)
+
+        if $target.is('.even-grid--contents_is-active a')
+          # If we click a link in an active item,
+          # don't toggle the "active-ness", because that's ugly
+          console.log "not preventing default"
+          return
+        else
+          # If we click a link in a not-active item,
+          # don't go to it, because it was just a coincidence
+          ev.preventDefault()
+          console.log "preventing default"
+
+        if $currentTarget.is('.even-grid--contents_multiple-actions')
+          $currentTarget.toggleClass('even-grid--contents_is-active');
+        else
+          defaultAction = $currentTarget.find('.even-grid--button-wrapper :first-child').attr('href')
+          window.location = defaultAction
 
   # Initializers
   common:
@@ -70,5 +103,6 @@ window.APP =
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
         resizeText()
+        APP.evenGrid.init()
 
 APP.common.init()
