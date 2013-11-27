@@ -149,6 +149,11 @@ $active-class: "even-grid--contents_is-active";
     bottom: $item-inner-padding;
     right: $item-inner-padding;
   }
+
+  // Move out of the way for clicking buttons
+  .#{$active-class} & {
+    top: 100%;
+  }
 }
 
 .even-grid--image {
