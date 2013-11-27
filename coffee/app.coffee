@@ -21,8 +21,6 @@ window.APP =
 
           $(this).toggleClass('even-grid--contents_is-active');
         )
-      else
-        console.log "No even grid here. Move along."
 
   # Initializers
   common:
