@@ -4,19 +4,19 @@
     - cta: "Read More"
       url: "/work/thing"
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: Dayton Clean Coders Website
   headline: Increase conversion rates on mobile devices by 20%.
   actions:
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: FancyProject.biz
   headline: Synergize business solutions to attain real-world goals, generating optimum profit
   actions:
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: MSJ.EDU Website
   headline: Fusce ut nibh ipsum. Integer nibh etristique t purus elementum congue. Mauris ultricies.
@@ -26,13 +26,13 @@
     - cta: "Read More"
       url: "/work/thing"
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: Tunnel Vision Labs Website
   headline: Fusce ut nibh ipsum. Integer nibh etristique t purus elementum congue. Mauris ultricies.
   actions:
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: Lorem Ipsum
   headline: Fusce ut nibh ipsum. Integer nibh etristique t purus elementum congue. Mauris ultricies.
@@ -40,11 +40,11 @@
   image_alt: "Screenshot of MSJ.EDU Website"
   actions:
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
 - title: Lorem Ipsum
   headline: Fusce ut nibh ipsum. Integer tristique nibh et purus elementum congue. Mauris ultricies.
   actions:
     - cta: "View Site"
-      url: "http://purple.com"
+      url: "http://google.com"
 
