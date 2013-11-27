@@ -4,7 +4,7 @@
   padding: 0;
 }
 .foundry--item{
-  @include rem(margin-bottom, 1);
+  @include rem(margin-bottom, 1.5);
   border-bottom: 1px solid #ccc;
   @include sb-media(45em){
     @include rem(margin-bottom, 2.75);
@@ -31,9 +31,14 @@
 .foundry--title{
   @include rem(margin, .5, 0);
   @include sb-media(25em) {
-    @include rem(font-size, 2.25);
+    @include rem(font-size, 2);
   }
   @include sb-media(45em){
+    @include rem(font-size, 2.15);
+    margin: 0;
+    width: 75%;
+  }
+  @include sb-media(60em){
     @include rem(font-size, 2.5);
     margin: 0;
     width: 75%;
