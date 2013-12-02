@@ -22,13 +22,11 @@ window.APP =
         if $target.is('.even-grid--contents_is-active a')
           # If we click a link in an active item,
           # don't toggle the "active-ness", because that's ugly
-          console.log "not preventing default"
           return
         else
           # If we click a link in a not-active item,
           # don't go to it, because it was just a coincidence
           ev.preventDefault()
-          console.log "preventing default"
 
         if $currentTarget.is('.even-grid--contents_multiple-actions')
           $currentTarget.toggleClass('even-grid--contents_is-active');
@@ -47,8 +45,6 @@ window.APP =
     resizeText: ($el) ->
       compression = $el.data('fittext-compression')
       mediaQuery = $el.data('fittext-media-query')
-
-      console.log mediaQuery
 
       if mediaQuery
         mediaCheck(
