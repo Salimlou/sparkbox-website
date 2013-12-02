@@ -39,10 +39,12 @@ window.APP =
   fitText:
     init: ->
       if $().fitText
-        $("[data-fittext-compression]").each ->
+        $('[data-fittext-compression]').each ->
           $this = $(this)
-          compression = $this.data("fittext-compression")
+          compression = $this.data('fittext-compression')
           $this.fitText(compression)
+      else
+        console.log('fitText could not be loaded.')
     
 
   # Initializers
