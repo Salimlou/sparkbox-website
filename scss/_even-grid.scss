@@ -202,12 +202,14 @@ $active-class: "even-grid--contents_is-active";
 }
 
 .even-grid--button-wrapper_with-image {
-  // same styles as media query, but without media query
-
   position: absolute;
-  bottom: 2em;
+  bottom: 5em;
 
   // stretch out to allow centered button
   left: 0;
   right: 0;
+  
+  @include sb-media($bp-evenGrid-2col) {
+    bottom: 2em;
+  }
 }
