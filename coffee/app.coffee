@@ -8,12 +8,12 @@ window.APP =
         if Modernizr.touch
           $evenGrid.on('click', '.even-grid--contents', APP.evenGrid.clickToggle)
         else
-          $evenGrid.on('mouseenter', '.even-grid--contents', APP.evenGrid.hoverToggle)
-          $evenGrid.on('mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
+          $evenGrid.on('mouseenter mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
 
     hoverToggle: (ev) ->
         $currentTarget = $(ev.currentTarget)
-        $currentTarget.toggleClass('even-grid--contents_is-active');
+        isEnter = ev.type == 'mouseenter'
+        $currentTarget.toggleClass('even-grid--contents_is-active', isEnter)
 
     clickToggle: (ev) ->
         $currentTarget = $(ev.currentTarget)
@@ -35,6 +35,15 @@ window.APP =
         else
           defaultAction = $currentTarget.find('.even-grid--button-wrapper :first-child').attr('href')
           window.location = defaultAction
+
+  fitText:
+    init: ->
+      if $().fitText
+        $("[data-fittext-compression]").each ->
+          $this = $(this)
+          compression = $this.data("fittext-compression")
+          $this.fitText(compression)
+    
 
   # Initializers
   common:
@@ -68,20 +77,13 @@ window.APP =
         # Adds a "Introduction" header to the first wrapped content that lacks a header.
         $(".foundry-article--expandable-content").first().before "<div class=\"foundry-article--expandable-header foundry-article--added-header\">Introduction</div>"
 
-      resizeText = ->
-        if $().fitText
-          $("[data-fittext-compression]").each ->
-            $this = $(this)
-            compression = $this.data("fittext-compression")
-            $this.fitText(compression)
-      
       # Setup the markup when the document is ready.
       $(document).ready ->
         if $headerTags.length > 0
           createDisplayOptions()
           # "Full Article" and "Quick Read" Switch
           $(".foundry-header--link").click (e) ->
-            $(".ffoundry-header--link").each ->
+            $(".foundry-header--link").each ->
               $(this).removeClass "foundry-header--link_is-selected"
             if $(this).hasClass("reading-style--quick-read")
               $(this).addClass "foundry-header--link_is-selected"
@@ -102,7 +104,8 @@ window.APP =
               $(".foundry-article--expandable-header").each ->
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
-        resizeText()
+
+        APP.fitText.init()
         APP.evenGrid.init()
 
 APP.common.init()
