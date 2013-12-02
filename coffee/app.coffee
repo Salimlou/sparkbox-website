@@ -40,12 +40,35 @@ window.APP =
     init: ->
       if $().fitText
         $('[data-fittext-compression]').each ->
-          $this = $(this)
-          compression = $this.data('fittext-compression')
-          $this.fitText(compression)
+          APP.fitText.resizeText($(this))
       else
         console.log('fitText could not be loaded.')
-    
+
+    resizeText: ($el) ->
+      compression = $el.data('fittext-compression')
+      mediaQuery = $el.data('fittext-media-query')
+
+      console.log mediaQuery
+
+      if mediaQuery
+        mediaCheck(
+          media: mediaQuery
+          entry: ->
+            $el.fitText(compression)
+          exit: ->
+            APP.fitText.cleanup($el)
+        )
+      else
+        $el.fitText(compression)
+
+
+    cleanup: ($el) ->
+      # Remove resize binding
+      $(window).off('resize.fittext orientationchange.fittext')
+
+      # Remove inline styles
+      $($el).removeAttr('style')
+  
 
   # Initializers
   common:
