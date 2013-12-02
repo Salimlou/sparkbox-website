@@ -4,6 +4,8 @@ subtitle: Table of Contents
 sparkbox-pages:
   - page-title: "Styleguide"
     page-link: "styleguide/"
+  - page-title: "Home"
+    page-link: "home.html"
   - page-title: "Foundry Listing"
     page-link: "foundry-listing.html"
   - page-title: "Foundry Entry"
