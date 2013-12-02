@@ -22,17 +22,17 @@
           <p class="even-grid--subtitle {{#if image}}even-grid--subtitle_with-image{{/if}}" data-fittext-compression="1.7" data-fittext-media-query="(min-width: 40em)">{{ headline }}</p>
           {{/if}}
 
-          <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
-            {{#each actions}}
-            <a href="{{ url }}" class="button button_standard-hidden button_inline">{{ cta }}</a>
-            {{/each}}
-          </div>
-
           {{#if image}}
           <div class="even-grid--image-wrapper">
             <img class="even-grid--image" src="{{ image }}" alt="{{ image_alt }}" />
           </div>
           {{/if}}
+
+          <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
+            {{#each actions}}
+            <a href="{{ url }}" class="button button_standard-hidden button_inline">{{ cta }}</a>
+            {{/each}}
+          </div>
 
         </div>
 
