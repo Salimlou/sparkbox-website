@@ -37,33 +37,40 @@ window.APP =
   fitText:
     init: ->
       if $().fitText
-        $('[data-fittext-compression]').each ->
-          APP.fitText.resizeText($(this))
+        mediaQueries = APP.fitText.getUniqueMediaQueries()
+
+        for mq in mediaQueries
+          mediaCheck(
+            media: mq
+            entry: ->
+              APP.fitText.resizeAll()
+            exit: ->
+              APP.fitText.cleanup()
+          )
+
       else
         console.log('fitText could not be loaded.')
 
-    resizeText: ($el) ->
-      compression = $el.data('fittext-compression')
-      mediaQuery = $el.data('fittext-media-query')
+    resizeAll: ->
+      $('[data-fittext-compression]').each(->
+        $(this).fitText(1.7)
+      )
 
-      if mediaQuery
-        mediaCheck(
-          media: mediaQuery
-          entry: ->
-            $el.fitText(compression)
-          exit: ->
-            APP.fitText.cleanup($el)
-        )
-      else
-        $el.fitText(compression)
-
+    getUniqueMediaQueries: ->
+      list = []
+      $('[data-fittext-compression]').each(->
+        $this = $(this)
+        mq = $this.data('fittext-media-query')
+        list.push(mq) unless $.inArray(mq, list) > -1
+      )
+      list
 
     cleanup: ($el) ->
       # Remove resize binding
       $(window).off('resize.fittext orientationchange.fittext')
 
       # Remove inline styles
-      $($el).removeAttr('style')
+      $('[data-fittext-compression]').removeAttr('style')
   
 
   # Initializers
