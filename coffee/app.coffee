@@ -5,36 +5,52 @@ window.APP =
     init: ->
       $evenGrid = $('.even-grid') 
       if $evenGrid.length > 0
-        if Modernizr.touch
-          $evenGrid.on('click', '.even-grid--contents', APP.evenGrid.clickToggle)
-        else
-          $evenGrid.on('mouseenter', '.even-grid--contents', APP.evenGrid.hoverToggle)
-          $evenGrid.on('mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
+        unless Modernizr.touch
+          $evenGrid.on('mouseenter mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
 
     hoverToggle: (ev) ->
         $currentTarget = $(ev.currentTarget)
-        $currentTarget.toggleClass('even-grid--contents_is-active');
+        isEnter = ev.type == 'mouseenter'
+        $currentTarget.toggleClass('even-grid--contents_is-active', isEnter)
 
-    clickToggle: (ev) ->
-        $currentTarget = $(ev.currentTarget)
-        $target = $(ev.target)
+  fitText:
+    init: ->
+      if $().fitText
+        mediaQueries = APP.fitText.getUniqueMediaQueries()
 
-        if $target.is('.even-grid--contents_is-active a')
-          # If we click a link in an active item,
-          # don't toggle the "active-ness", because that's ugly
-          console.log "not preventing default"
-          return
-        else
-          # If we click a link in a not-active item,
-          # don't go to it, because it was just a coincidence
-          ev.preventDefault()
-          console.log "preventing default"
+        for mq in mediaQueries
+          mediaCheck(
+            media: mq
+            entry: ->
+              APP.fitText.resizeAll()
+            exit: ->
+              APP.fitText.cleanup()
+          )
 
-        if $currentTarget.is('.even-grid--contents_multiple-actions')
-          $currentTarget.toggleClass('even-grid--contents_is-active');
-        else
-          defaultAction = $currentTarget.find('.even-grid--button-wrapper :first-child').attr('href')
-          window.location = defaultAction
+      else
+        console.log('fitText could not be loaded.')
+
+    resizeAll: ->
+      $('[data-fittext-compression]').each(->
+        $(this).fitText(1.7)
+      )
+
+    getUniqueMediaQueries: ->
+      list = []
+      $('[data-fittext-compression]').each(->
+        $this = $(this)
+        mq = $this.data('fittext-media-query')
+        list.push(mq) unless $.inArray(mq, list) > -1
+      )
+      list
+
+    cleanup: ($el) ->
+      # Remove resize binding
+      $(window).off('resize.fittext orientationchange.fittext')
+
+      # Remove inline styles
+      $('[data-fittext-compression]').removeAttr('style')
+  
 
   # Initializers
   common:
@@ -68,20 +84,13 @@ window.APP =
         # Adds a "Introduction" header to the first wrapped content that lacks a header.
         $(".foundry-article--expandable-content").first().before "<div class=\"foundry-article--expandable-header foundry-article--added-header\">Introduction</div>"
 
-      resizeText = ->
-        if $().fitText
-          $("[data-fittext-compression]").each ->
-            $this = $(this)
-            compression = $this.data("fittext-compression")
-            $this.fitText(compression)
-      
       # Setup the markup when the document is ready.
       $(document).ready ->
         if $headerTags.length > 0
           createDisplayOptions()
           # "Full Article" and "Quick Read" Switch
           $(".foundry-header--link").click (e) ->
-            $(".ffoundry-header--link").each ->
+            $(".foundry-header--link").each ->
               $(this).removeClass "foundry-header--link_is-selected"
             if $(this).hasClass("reading-style--quick-read")
               $(this).addClass "foundry-header--link_is-selected"
@@ -102,7 +111,8 @@ window.APP =
               $(".foundry-article--expandable-header").each ->
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
-        resizeText()
+
+        APP.fitText.init()
         APP.evenGrid.init()
 
 APP.common.init()
