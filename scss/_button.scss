@@ -58,6 +58,18 @@ $c--standard-dark: $c-tx-dark;
   .even-grid--contents_is-active & {
     opacity: 1;
   }
+
+  &:hover {
+    color: shade($c--standard-dark, 40%);
+    background-color: tint($c--standard-light, 80%);
+  }
+  
+  .no-js & {
+    opacity: 1;
+
+    color: $c--standard-light;
+    background-color: $c--standard-dark;
+  }
 }
 
 .button_inline {
