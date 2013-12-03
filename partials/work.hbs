@@ -14,7 +14,7 @@
       <div class="even-grid--item-inner-wrapper">
 
         {{!-- This href should be the href of the first action item --}}
-        <div class="even-grid--contents {{#gt actions.length 1}}even-grid--contents_multiple-actions{{/gt}}">
+        <div class="even-grid--contents">
 
           <h2 class="even-grid--title" data-fittext-compression="1.7" data-fittext-media-query="(min-width: 40em)">{{ title }}</h2>
 
@@ -29,9 +29,7 @@
           {{/if}}
 
           <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
-            {{#each actions}}
-            <a href="{{ url }}" class="button button_standard-hidden button_inline">{{ cta }}</a>
-            {{/each}}
+            <a href="{{ action.url }}" class="button button_standard-hidden button_inline">{{ action.cta }}</a>
           </div>
 
         </div>

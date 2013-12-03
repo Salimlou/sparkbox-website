@@ -1,30 +1,11 @@
 $bp-evenGrid-2col: 40em;
-$bp-evenGrid-3col: 65em;
-$bp-evenGrid-4col: 90em;
+$bp-evenGrid-3col: 66em;
+$bp-evenGrid-4col: 91em;
 
 $even-grid--base-ratio: 80.27%;
 $item-inner-padding: 0.9em;
 
 $active-class: "even-grid--contents_is-active";
-
-@mixin even-grid--font-resize($bps...){
-  // This generates new font sizes in media queries
-  // for even-grid text elements.
-  // Since this generates media queries, for best results,
-  // don't put this in a media query,
-  // as it would otherwise create some weird combined media queries
-  @each $bp in $bps {
-    @include sb-media($bp) {
-      font-size: 1em;
-    }
-    @include sb-media($bp + 10) {
-      font-size: 1.3em;
-    }
-    @include sb-media($bp + 18) {
-      font-size: 1.6em;
-    }
-  }
-}
 
 .even-grid {
   // Reset list styles
@@ -119,7 +100,9 @@ $active-class: "even-grid--contents_is-active";
   @extend %font-primary;
   font-weight: lighter;
   font-size: 1.3em;
-  @include even-grid--font-resize($bp-evenGrid-2col, $bp-evenGrid-3col, $bp-evenGrid-4col);
+  @include sb-media($bp-evenGrid-2col) {
+    margin-top: 2em;
+  }
 }
 
 .even-grid--subtitle_with-image {
@@ -190,11 +173,14 @@ $active-class: "even-grid--contents_is-active";
 .even-grid--button-wrapper {
   @include sb-media($bp-evenGrid-2col) {
     position: absolute;
-    bottom: 2em;
+    bottom: 1.5em;
 
     // stretch out to allow centered button
     left: 0;
     right: 0;
+  }
+  @include sb-media(132em) {
+    font-size: 1.2em;
   }
 }
 
@@ -207,6 +193,6 @@ $active-class: "even-grid--contents_is-active";
   right: 0;
   
   @include sb-media($bp-evenGrid-2col) {
-    bottom: 2em;
+    bottom: 1.5em;
   }
 }
