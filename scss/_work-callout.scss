@@ -1,16 +1,55 @@
 $c-highlight: #3DA9BD;
 
 .work-callout {
+  color: $c-tx-dark;
 }
 
 .work-callout--media {
+  text-align: center;
+  background-color: #e5fcfe;
+}
+
+.work-callout--image-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.work-callout--image {
+  max-width: 100%;
+
+  // Prevent mysterious whitespace below
+  display: block;
 }
 
 .work-callout--content {
+  padding: 7%;
+  background-color: #C8ECF1;
 }
 
 .work-callout--title {
+  // Reset default heading styles
+  margin: 0;
+
+  padding: 1em 0;
+  font-size: 1em;
+
+  @include sb-media(26em) {
+    font-size: 1.3em;
+    padding: 1.5em 0;
+  }
+}
+
+.work-callout--button-wrapper {
+  text-align: center;
+  padding-top: 1em;
 }
 
 .work-callout--subtitle {
+  // Reset default heading styles
+  margin: 0;
+
+  @extend %font-primary;
+  font-size: 0.8em;
+  color: $c-tx-light;
+  text-transform: uppercase;
 }

@@ -13,7 +13,10 @@
           <h2 class="work-callout--title">
             {{ title }}
           </h2>
-          {{ image_url }}
+
+          <div class="work-callout--image-wrapper">
+            <img class="work-callout--image" src="{{ image_url }}" alt="Screenshot of {{ title }}" />
+          </div>
         </div>
 
         <div class="work-callout--content">
