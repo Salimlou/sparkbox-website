@@ -6,9 +6,33 @@
 
   <section>
 
-    <div class="work-callout">
-      hello world
-    </div>
+    {{#each work-items}}
+      <div class="work-callout">
+
+        <div class="work-callout--media">
+          <h2 class="work-callout--title">
+            {{ title }}
+          </h2>
+          {{ image_url }}
+        </div>
+
+        <div class="work-callout--content">
+
+          <p class="work-callout--subtitle">
+            {{ join tags ", " }}
+          </p>
+
+          <p class="long-reading">
+            {{ body }}
+          </p>
+
+          <div class="work-callout--button-wrapper">
+            <a class="button button_standard button_inline" href="{{ action.url }}">{{ action.title }}</a>
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
 
   </section>
 </main>
