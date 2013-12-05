@@ -188,6 +188,13 @@ module.exports = (grunt) ->
         files:
           'reports/js-complexity': ['dist/**/*.js']
 
+    coffeelint:
+      app: ['coffee/*.coffee']
+      options:
+        'cyclomatic_complexity':
+          'value': 6 # default 10
+          'level': 'warn' # default ignore
+
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
@@ -203,6 +210,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-imageoptim"
   grunt.loadNpmTasks "assemble"
   grunt.loadNpmTasks "grunt-sg"
+  grunt.loadNpmTasks "grunt-coffeelint"
 
   # NOTE: this has to wipe out everything
   grunt.registerTask "root-canal", [ "clean:all", "copy:main", "copy:img"]
