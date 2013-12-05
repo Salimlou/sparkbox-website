@@ -80,11 +80,6 @@ Styleguide 1.1
   }
 }
 
-.site-nav {
-  @include sb-media(38em) {
-
-  }
-}
 .nav-button {
   @include rem(letter-spacing, .2);
   @include rem(margin, 1.15, .5, 0, 0);
