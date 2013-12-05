@@ -1,18 +1,45 @@
 .devices-hero {
   background: $c-bg-primary;
   text-align: center;
-  padding: 20% 1em;
+  padding: 10% 1em;
+  position: relative;
+  overflow: hidden;
 
   @include sb-media( $bp-layout-small ) {
-    padding: 20% 5%;
+    padding: 12% 5%;
   }
+}
+
+.devices-hero--art-wrapper {
+  position: absolute;
+  width: 30em;
+  left: 50%;
+
+  @include sb-media( $bp-layout-small ) {
+    width: 50%;
+  }
+}
+
+.devices-hero--art {
+  position: relative;
+  left: -50%;
+
+  object {
+    float: left;
+  }
+}
+
+.devices-hero--content {
+  position: relative;
+  margin-top: 3em;
 }
 
 .devices-hero--title {
   text-transform: uppercase;
+  margin: 0;
 }
 
-.devices-hero--title-first {
+.devices-hero--title--first {
   @include rem( font-size, 1 );
   color: #fff;
   display: block;
@@ -24,7 +51,7 @@
   }
 }
 
-.devices-hero--title-second {
+.devices-hero--title--second {
   @include rem( font-size, 2.9 );
   color: $c-tx-dark;
   display: block;
@@ -39,6 +66,7 @@
 .devices-hero--subtitle {
   @include rem( font-size, 1.1 );
   color: #fff;
+  margin: 1em 0 0;
 
   @include sb-media( $bp-layout-small ) {
     @include rem( font-size, 1.3 );
