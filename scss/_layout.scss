@@ -67,6 +67,12 @@
   }
 }
 
+.layout--hide-at-small{
+  display: none !important;
+  @include sb-media(38em){
+    display: inline !important;
+  }
+}
 
 // Naming experiment
 
