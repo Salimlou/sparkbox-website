@@ -1,0 +1,46 @@
+.foundry--search {
+  background: $c-bg-midGray;
+  padding: 1em 0;
+}
+
+.seach--form {
+  max-width: 65em;
+  margin: 0 auto;
+  display: table;
+}
+
+.search--group {
+  display: table-cell;
+  width: 25%;
+}
+
+.search--long-group {
+  width: 50%;
+}
+
+.hidden-label {
+  display: none;
+}
+
+.search--select,
+.search--input {
+  @extend %font-body;
+  border: 0 none;
+  font-size: 1.125em;
+  @include appearance(none);
+  @include border-radius(0);
+  @include rem(padding,1);
+  &:focus {
+    outline: none;
+  }
+}
+
+.search--select {
+  background: $c-bg-lightGray;
+  color: $c-bg-midGray;
+}
+
+.search--input {
+  background: white;
+  color: $c-bg-lightGray;
+}
