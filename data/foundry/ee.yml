@@ -1,0 +1,11 @@
+title: |
+  {if segment_2 == ""}
+    {exp:seo_lite url_title="{segment_1}"}
+  {if:else}
+    {exp:seo_lite url_title="{segment_2}"}
+  {/if}
+
+robots: |
+  {if segment_2 == "all" OR segment_2 == "principle" OR segment_2 == "tech"}
+    <meta name="robots" content="noindex">
+  {/if}

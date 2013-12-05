@@ -19,6 +19,7 @@
     "grunt-imageoptim": "~1.2.6",
     "assemble": "~0.4.13",
     "grunt-contrib-connect": "~0.5.0",
-    "grunt-sg": "~0.1.6"
+    "grunt-sg": "~0.1.6",
+    "grunt-contrib-symlink": "~0.2.0"
   }
 }
