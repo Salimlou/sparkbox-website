@@ -3,7 +3,7 @@ window.APP =
 
   evenGrid:
     init: ->
-      $evenGrid = $('.even-grid') 
+      $evenGrid = $('.even-grid')
       if $evenGrid.length > 0
         unless Modernizr.touch
           $evenGrid.on('mouseenter mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
@@ -50,29 +50,60 @@ window.APP =
 
       # Remove inline styles
       $('[data-fittext-compression]').removeAttr('style')
-  
+
 
   # Initializers
   common:
     init: ->
-     
+      # Create Small Screen Subnav Button
+      # Show Nav Functions
+      showMenu = ->
+        $(".site-nav--list").toggleClass "site-nav--display"
+        $(".nav-button").toggleClass "nav-button--open", "nav-button--close"
+      hideMenu = ->
+        $(".site-nav--list").removeClass "site-nav--display"
+        $(".nav-button").removeClass("nav-button--close").addClass "nav-button--open"
+
+      # Show Nav Event
+      $(".nav-button").click (e) ->
+        showMenu()
+        e.preventDefault()
+
+
+      # Create Small Screen Subnav Button
+      # Show Nav Functions
+      showContact = ->
+        $(".contact-info--container").toggleClass "contact-info--display"
+        $(".site-nav--contact").toggleClass "contact--open", "contact--close"
+      hideContact = ->
+        $(".contact-info--container").removeClass "contact-info--display"
+        $(".site-nav--contact").removeClass("contact--close").addClass "contact--open"
+
+      # Show Nav Event
+      $(".site-nav--contact").click (e) ->
+        showContact()
+        e.preventDefault()
+
+      #####################
+      # FOUNDRY FUNCTIONS #
+      #####################
       $foundryArticleContent = $(".js-foundry-article--content")
       $headerTags = $foundryArticleContent.find(":header")
       createDisplayOptions = ->
         $(".js-site-main").before "<div class=\"foundry-header\"></div>"
         $(".foundry-header").html "<ul class=\"foundry-header--list\">" + "<li class=\"foundry-header--list-item\">" + "<a class=\"foundry-header--link foundry-header--link_is-selected reading-style--full-article\" href=\"\">Full Article</a>" + "</li>" + "<li class=\"foundry-header--list-item\">" + "<a class=\"foundry-header--link reading-style--quick-read\" href=\"\">Quick Read</a>" + "</li>" + "</ul>"
-      
+
       # Creates intro text
       createIntroText = ->
         $introText = $foundryArticleContent.data("intro")
         $introContainer = $("<p class=\"foundry-article--intro\">" + $introText + "</p>")
         $foundryArticleContent.prepend $introContainer
-      
+
       # Finds headers in the article content and adds class for "Quick Read" format.
       findHeaders = ->
         $headerTags.each ->
           $headerTags.addClass "foundry-article--expandable-header"
-      
+
       # Finds and wraps content between headers for "Quick Read" format
       expandableContent = ->
         # Wraps the first block of content at the beginning of the Article without a header.
