@@ -188,12 +188,19 @@ module.exports = (grunt) ->
         files:
           'reports/js-complexity': ['dist/**/*.js']
 
+    symlink:
+      explicit:
+        src: '../foundry'
+        dest: 'dist/foundry'
+
+
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-compass"
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-jasmine"
+  grunt.loadNpmTasks "grunt-contrib-symlink"
   grunt.loadNpmTasks "grunt-cucumber"
   grunt.loadNpmTasks "grunt-modernizr"
   grunt.loadNpmTasks "grunt-notify"
@@ -215,9 +222,9 @@ module.exports = (grunt) ->
   grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "modernizr", "jasmine", "cucumberjs" ]
 
   # Production task
-  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "watch"]
+  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "symlink", "watch"]
 
-  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "sg" ]
+  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "sg", "symlink" ]
 
   # Default task
   grunt.registerTask "default", "dev"
