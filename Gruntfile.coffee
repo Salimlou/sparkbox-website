@@ -57,7 +57,7 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          "js/app.js": "coffee/app.coffee"
+          "js/app.js": ["coffee/foundry-listing.coffee", "coffee/foundry-detail.coffee", "coffee/app.coffee"]
       jasmine_specs:
         files: grunt.file.expandMapping(["specs/*.coffee"], "specs/js/", {
           rename: (destBase, destPath) ->

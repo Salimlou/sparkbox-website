@@ -1,32 +1,28 @@
 /*
-This module is a sort of subheader that apears on the pages of the Foundry, just below the primary site-header.
-This header typically contains options for visitors to choose their
-reading style.
+This module is a sort of subheader that apears on the
+pages of the Foundry, just below the primary site-header.
+This header typically contains options for visitors
+to choose their reading style.
 
 Styleguide 1.2
 */
 
-.foundry-header {
-  background-color: $c-bg-primaryLight2x;
-}
-
-.foundry-header--list {
+.display-options--list {
   @extend %remove-list-styles;
   display: table;
   width: 100%;
-  max-width: 64em;
+//  max-width: 64em;
   @include sb-media(45em) {
-    margin: 0 auto;
+    margin: 1em auto 1.5em;
     display: block;
     width: auto;
   }
 }
 
-.foundry-header--list-item {
+.display-options--item {
   vertical-align: middle;
   width:50%;
   display: table-cell;
-  padding: 1em .5em 1.5em;
   @include sb-media(45em) {
     @include inline(top);
     width: auto;
@@ -37,7 +33,7 @@ Styleguide 1.2
   }
 }
 
-.foundry-header--link {
+.display-options--link {
   @extend %font-primary;
   color: $c-tx-dark;
   font-size: 1.1875em;
@@ -52,8 +48,8 @@ Styleguide 1.2
   }
 }
 
-.foundry-header--link:hover,
-.foundry-header--link_is-selected {
+.display-options--link:hover,
+.display-options--selected-link {
   background-color: $c-bg-primaryLight;
   @include sb-media(45em) {
     &:after {

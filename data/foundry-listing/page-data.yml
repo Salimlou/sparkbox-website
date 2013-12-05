@@ -1,1 +1,77 @@
 foundry: true
+authors:
+  - name: "Author"
+    id: 0
+  - name: "Adam Simpson"
+    id: 1
+  - name: "Ben Callahan"
+    id: 2
+  - name: "Drew Clemens"
+    id: 3
+  - name: "Emily Gray"
+    id: 4
+  - name: "Ethan Muller"
+    id: 5
+  - name: "Jän Ostendorf"
+    id: 6
+  - name: "Jeremy Loyd"
+    id: 7
+  - name: "Jeremy Mack"
+    id: 8
+  - name: "Marshall Norman"
+    id: 9
+  - name: "Mike Yockey"
+    id: 10
+  - name: "Neil Renicker"
+    id: 11
+  - name: "Patrick Simpson"
+    id: 12
+  - name: "Philip Zastrow"
+    id: 13
+  - name: "Rob Harr"
+    id: 14
+  - name: "Rob Tarr"
+    id: 15
+  - name: "Ryan Cromwell"
+    id: 16
+  - name: "Ryann Pierce"
+    id: 17
+type:
+  - title: "Type"
+    id: 0
+  - title: "Principles"
+    id: 1
+  - title: "Tech"
+    id: 2
+  - title: "Other Stuff"
+    id: 3
+  - title: "CSS FTW!"
+    id: 4
+  - title: "IDK"
+    id: 5
+foundry-articles:
+  - title: "New Design Deliverable: The Style Prototype"
+    target: "foundry-entry.html"
+    date: "8-15-13"
+    author: "Jeremy Loyd"
+    intro: "With web design changing as fast as ever, the Sparkbox team can't stop looking for new ways to refine our process to meet the growing challenges."
+  - title: "Unhappy Yuppies, Dirty Jobs, and Web Workers"
+    target: "foundry-entry.html"
+    date: "12-4-13"
+    author: "Drew Clemens"
+    intro: "In an internet sea of crap and kittens, a couple nuggets of truth have floated to the surface recently for young people entering the work force."
+  - title: "How to Put a Kind Englishman in Your Build Process"
+    target: "foundry-entry.html"
+    date: "11-26-13"
+    author: "Adam Simpson"
+    intro: "Yeoman has incorporated Grunt and Bower to form a frontend-automation superhero team of awesomeness. Now we're harnessing that power with Mg, the Yeoman generator version of project-init."
+  - title: "Meet Ryan"
+    target: "foundry-entry.html"
+    date: "11-18-13"
+    author: "Sparkbox"
+    intro: "Our newest developer now changes diapers, but he once changed gravity."
+  - title: "Content Priority Guide"
+    target: "foundry-entry.html"
+    date: "11-12-13"
+    author: "Emily Gray"
+    intro: "A content priority guide is part content modeling, part stripped-down wireframe, and useful throughout developing a site."
