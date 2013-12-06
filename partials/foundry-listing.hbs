@@ -1,14 +1,18 @@
 {{> _head}}
 {{> _site-header}}
-<div class="foundry--search">
-  <form class="seach--form">
-    <div class="search--group search--long-group">
-      <label class="search--label hidden-label" for="input--search">Search</label>
-      <input type="search" class="search--input" id="input--search" name="input--search" placeholder="Search the Foundry">
-      <button class="search--button">Go</button>
-    </div>
-  </form>
+
+<div class="foundry--formset foundry--search">
+  <div class="foundry--form-container">
+    <form class="foundry--form">
+      <div class="form--group">
+        <label class="form--label" for="search--form">Find an article</label>
+        <input type="search" class="form--input" id="search--form" name="search --form" placeholder="Search the Foundry">
+        <button class="form--button">Go</button>
+      </div>
+    </form>
+  </div>
 </div>
+
 <main class="layout--container layout--vertical-space-2x site-main js-site-main">
   <section class="foundry--container">
     <ul class="foundry--entries">
@@ -30,17 +34,28 @@
       </li>
       {{/each}}
     </ul>
+    <div class="pagination">
+      <a class="pagination--link pagination--prev-link" href="#">Previous</a>
+      <a href="#" class="pagination--page-link">1</a>
+      <a href="#" class="pagination--page-link">2</a>
+      <a href="#" class="pagination--page-link pagination--current-page">3</a>
+      <a href="#" class="pagination--page-link">4</a>
+      <a href="#" class="pagination--page-link">5</a>
+      <a class="pagination--link pagination--next-link" href="#">Next</a>
+    </div>
   </section>
 </main>
-<div class="foundry--search">
-  <form class="seach--form">
-    <div class="search--group search--long-group">
-      <p>Keep up with new posts in the Foundry by subscribing to our weekly email: The Spark.</p>
-      <label class="search--label hidden-label" for="input--search">Sign up</label>
-      <input type="email" class="search--input" id="input--search" name="input--search" placeholder="email@domain.com">
-      <button class="search--button">Sign Up</button>
-    </div>
-  </form>
+
+<div class="foundry--formset">
+  <div class="foundry--form-container">
+    <form class="foundry--form foundry--newsletter">
+      <div class="form--group">
+        <label class="form--label" for="newsletter--signup">Get Email Updates</label>
+        <input type="email" class="form--input" id="newsletter--signup" name="  newsletter--signup" placeholder="email@domain.com">
+        <button class="form--button">Sign Up</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 {{> _footer}}

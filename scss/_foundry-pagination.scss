@@ -1,0 +1,44 @@
+.pagination {
+  @extend %font-primary;
+  font-size: .875em;
+  line-height: .875em;
+  text-align: center;
+  margin: 2em auto;
+}
+
+.pagination--link,
+.pagination--page-link {
+  @include single-transition(all 250ms ease-out);
+}
+
+.pagination--page-link {
+  color: $c-bg-primaryDark;
+  margin: 0 .25em;
+}
+
+.pagination--current-page {
+  border-bottom: 2px solid $c-bg-primaryDark;
+  border-bottom: .125rem solid $c-bg-primaryDark;
+}
+
+
+.pagination--link {
+  @include inline(top);
+  width: 0;
+  height: .5em;
+  overflow: hidden;
+  text-indent: -9999px;
+  border: .375em solid transparent;
+}
+
+.pagination--prev-link {
+  border-right-color: $c-bg-primary;
+  border-right-width: .5em;
+  margin-right: .25em;
+}
+
+.pagination--next-link {
+  border-left-color: $c-bg-primary;
+  border-left-width: .5em;
+  margin-left: .25em;
+}
