@@ -2,22 +2,6 @@
 {{> _site-header}}
 <div class="foundry--search">
   <form class="seach--form">
-    <div class="search--group">
-      <label class="search--label hidden-label" for="select--authors">Author</label>
-      <select class="search--select" id="select--authors" name="select--authors">
-        {{#each page-data.authors}}
-          <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-      </select>
-    </div>
-    <div class="search--group">
-      <label class="search--label hidden-label" for="select--type">Type</label>
-      <select class="search--select" id="select--type" name="select--type">
-        {{#each page-data.type}}
-          <option value="{{this.id}}">{{this.title}}</option>
-        {{/each}}
-      </select>
-    </div>
     <div class="search--group search--long-group">
       <label class="search--label hidden-label" for="input--search">Search</label>
       <input type="search" class="search--input" id="input--search" name="input--search" placeholder="Search the Foundry">
@@ -48,5 +32,15 @@
     </ul>
   </section>
 </main>
+<div class="foundry--search">
+  <form class="seach--form">
+    <div class="search--group search--long-group">
+      <p>Keep up with new posts in the Foundry by subscribing to our weekly email: The Spark.</p>
+      <label class="search--label hidden-label" for="input--search">Sign up</label>
+      <input type="email" class="search--input" id="input--search" name="input--search" placeholder="email@domain.com">
+      <button class="search--button">Sign Up</button>
+    </div>
+  </form>
+</div>
 
 {{> _footer}}
