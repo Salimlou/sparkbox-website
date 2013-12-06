@@ -6,42 +6,36 @@
 
   <section>
 
-  <ol class="even-grid">
     {{#each work-items}}
-      <li class="even-grid--item">
+      <div class="work-callout">
 
+        <div class="work-callout--media">
+          <h2 class="work-callout--title">
+            {{ title }}
+          </h2>
 
-      <a href="{{ action.url }}">
-        <div class="even-grid--item-inner-wrapper">
-
-          {{!-- This href should be the href of the first action item --}}
-          <div class="even-grid--contents">
-
-            <h2 class="even-grid--title" data-fittext-compression="1.7" data-fittext-media-query="(min-width: 40em)">{{ title }}</h2>
-
-            {{#if headline}}
-            <p class="even-grid--subtitle {{#if image}}even-grid--subtitle_with-image{{/if}}" data-fittext-compression="1.7" data-fittext-media-query="(min-width: 40em)">{{ headline }}</p>
-            {{/if}}
-
-            {{#if image}}
-            <div class="even-grid--image-wrapper">
-              <img class="even-grid--image" src="{{ image }}" alt="{{ image_alt }}" />
-            </div>
-            {{/if}}
-
-            <div class="even-grid--button-wrapper {{#if image}}even-grid--button-wrapper_with-image{{/if}}">
-              <span class="button button_standard-hidden button_inline">{{ action.cta }}</span>
-            </div>
-
+          <div class="work-callout--image-wrapper">
+            <img class="work-callout--image" src="{{ image_url }}" alt="Screenshot of {{ title }}" />
           </div>
-
         </div>
-      </a>
 
+        <div class="work-callout--content">
 
-      </li>
+          <p class="work-callout--subtitle">
+            {{ join tags ", " }}
+          </p>
+
+          <p class="long-reading">
+            {{ body }}
+          </p>
+
+          <div class="work-callout--button-wrapper">
+            <a class="button button_standard button_inline" href="{{ action.url }}">{{ action.title }}</a>
+          </div>
+        </div>
+
+      </div>
     {{/each}}
-  </ol>
 
   </section>
 </main>

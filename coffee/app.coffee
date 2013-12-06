@@ -1,57 +1,6 @@
 # When you change APP, be sure to update it in mylibs/util.js
 window.APP =
 
-  evenGrid:
-    init: ->
-      $evenGrid = $('.even-grid')
-      if $evenGrid.length > 0
-        unless Modernizr.touch
-          $evenGrid.on('mouseenter mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
-
-    hoverToggle: (ev) ->
-        $currentTarget = $(ev.currentTarget)
-        isEnter = ev.type == 'mouseenter'
-        $currentTarget.toggleClass('even-grid--contents_is-active', isEnter)
-
-  fitText:
-    init: ->
-      if $().fitText
-        mediaQueries = APP.fitText.getUniqueMediaQueries()
-
-        for mq in mediaQueries
-          mediaCheck(
-            media: mq
-            entry: ->
-              APP.fitText.resizeAll()
-            exit: ->
-              APP.fitText.cleanup()
-          )
-
-      else
-        console.log('fitText could not be loaded.')
-
-    resizeAll: ->
-      $('[data-fittext-compression]').each(->
-        $(this).fitText(1.7)
-      )
-
-    getUniqueMediaQueries: ->
-      list = []
-      $('[data-fittext-compression]').each(->
-        $this = $(this)
-        mq = $this.data('fittext-media-query')
-        list.push(mq) unless $.inArray(mq, list) > -1
-      )
-      list
-
-    cleanup: ($el) ->
-      # Remove resize binding
-      $(window).off('resize.fittext orientationchange.fittext')
-
-      # Remove inline styles
-      $('[data-fittext-compression]').removeAttr('style')
-
-
   # Initializers
   common:
     init: ->
@@ -83,10 +32,6 @@ window.APP =
       $(".site-nav--contact").click (e) ->
         showContact()
         e.preventDefault()
-
-
-        APP.fitText.init()
-        APP.evenGrid.init()
 
       FOUNDRYLISTING.init()
       FOUNDRYDETAIL.init()

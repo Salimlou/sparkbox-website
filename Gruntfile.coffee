@@ -99,6 +99,16 @@ module.exports = (grunt) ->
           data: "data/work/*.yml"
         src: "partials/work.hbs"
         dest: "dist/work.html"
+      foundry_header:
+        options:
+          data: "data/foundry/*.yml"
+        src: "partials/foundry-header.hbs"
+        dest: "../foundry/forgeIt/expressionengine/templates/default_site/includes.group/foundry-header.html"
+      foundry_footer:
+        options:
+          data: "data/foundry/*.yml"
+        src: "partials/foundry-footer.hbs"
+        dest: "../foundry/forgeIt/expressionengine/templates/default_site/includes.group/foundry-footer.html"
 
     concat:
       js:
@@ -186,7 +196,13 @@ module.exports = (grunt) ->
     plato:
       complexity:
         files:
-          'reports/js-complexity': ['dist/**/*.js']
+          'reports/js-complexity': ['js/app.js']
+
+    symlink:
+      explicit:
+        src: '../foundry'
+        dest: 'dist/foundry'
+
 
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-coffee"
@@ -194,6 +210,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-compass"
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-jasmine"
+  grunt.loadNpmTasks "grunt-contrib-symlink"
   grunt.loadNpmTasks "grunt-cucumber"
   grunt.loadNpmTasks "grunt-modernizr"
   grunt.loadNpmTasks "grunt-notify"
@@ -215,9 +232,9 @@ module.exports = (grunt) ->
   grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "modernizr", "jasmine", "cucumberjs" ]
 
   # Production task
-  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "watch"]
+  grunt.registerTask "dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "sg", "symlink", "watch"]
 
-  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "sg" ]
+  grunt.registerTask "dist", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "sg", "symlink" ]
 
   # Default task
   grunt.registerTask "default", "dev"
