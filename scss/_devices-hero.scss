@@ -1,18 +1,62 @@
 .devices-hero {
   background: $c-bg-primary;
   text-align: center;
-  padding: 20% 1em;
+  padding: 8% 1em 18%;
+  position: relative;
+  overflow: hidden;
+}
 
-  @include sb-media( $bp-layout-small ) {
-    padding: 20% 5%;
+.devices-hero--art-wrapper {
+  position: absolute;
+  width: 93em;
+  height: 40em;
+  left: 50%;
+  top: -15em;
+
+  @include sb-media( $bp-layout-medium ) {
+    width: 93em;
+    height: 40em;
+    top: -10em;
   }
+}
+
+.devices-hero--art {
+  position: relative;
+  left: -50%;
+
+  object {
+    float: left;
+  }
+}
+
+//** SVG Styling **//
+
+$c-svg-color: #71CEDF;
+
+.devices-hero--device--outline {
+  fill: none;
+  stroke: $c-svg-color;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+.devices-hero--device--filled-shape {
+  fill: $c-svg-color;
+}
+
+//** End SVG Styling **//
+
+.devices-hero--content {
+  position: relative;
+  margin-top: 8%;
 }
 
 .devices-hero--title {
   text-transform: uppercase;
+  margin: 0;
 }
 
-.devices-hero--title-first {
+.devices-hero--title--first {
   @include rem( font-size, 1 );
   color: #fff;
   display: block;
@@ -24,7 +68,7 @@
   }
 }
 
-.devices-hero--title-second {
+.devices-hero--title--second {
   @include rem( font-size, 2.9 );
   color: $c-tx-dark;
   display: block;
@@ -33,14 +77,23 @@
 
   @include sb-media( $bp-layout-small ) {
     @include rem( font-size, 3.5 );
-  }  
+    margin-top: .5em;
+  }
+
+  @include sb-media( $bp-layout-medium ) {
+    @include rem( font-size, 4 );
+    letter-spacing: 10px;
+  }
 }
 
 .devices-hero--subtitle {
   @include rem( font-size, 1.1 );
   color: #fff;
+  margin: 1em auto 0;
+  max-width: 33em;
 
   @include sb-media( $bp-layout-small ) {
     @include rem( font-size, 1.3 );
+    margin-top: 1.6em;
   }
 }
