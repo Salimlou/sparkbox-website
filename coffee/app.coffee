@@ -1,57 +1,6 @@
 # When you change APP, be sure to update it in mylibs/util.js
 window.APP =
 
-  evenGrid:
-    init: ->
-      $evenGrid = $('.even-grid')
-      if $evenGrid.length > 0
-        unless Modernizr.touch
-          $evenGrid.on('mouseenter mouseleave', '.even-grid--contents', APP.evenGrid.hoverToggle)
-
-    hoverToggle: (ev) ->
-        $currentTarget = $(ev.currentTarget)
-        isEnter = ev.type == 'mouseenter'
-        $currentTarget.toggleClass('even-grid--contents_is-active', isEnter)
-
-  fitText:
-    init: ->
-      if $().fitText
-        mediaQueries = APP.fitText.getUniqueMediaQueries()
-
-        for mq in mediaQueries
-          mediaCheck(
-            media: mq
-            entry: ->
-              APP.fitText.resizeAll()
-            exit: ->
-              APP.fitText.cleanup()
-          )
-
-      else
-        console.log('fitText could not be loaded.')
-
-    resizeAll: ->
-      $('[data-fittext-compression]').each(->
-        $(this).fitText(1.7)
-      )
-
-    getUniqueMediaQueries: ->
-      list = []
-      $('[data-fittext-compression]').each(->
-        $this = $(this)
-        mq = $this.data('fittext-media-query')
-        list.push(mq) unless $.inArray(mq, list) > -1
-      )
-      list
-
-    cleanup: ($el) ->
-      # Remove resize binding
-      $(window).off('resize.fittext orientationchange.fittext')
-
-      # Remove inline styles
-      $('[data-fittext-compression]').removeAttr('style')
-
-
   # Initializers
   common:
     init: ->
@@ -121,7 +70,7 @@ window.APP =
           createDisplayOptions()
           # "Full Article" and "Quick Read" Switch
           $(".foundry-header--link").click (e) ->
-            $(".foundry-header--link").each ->
+            $(".ffoundry-header--link").each ->
               $(this).removeClass "foundry-header--link_is-selected"
             if $(this).hasClass("reading-style--quick-read")
               $(this).addClass "foundry-header--link_is-selected"
@@ -142,8 +91,6 @@ window.APP =
               $(".foundry-article--expandable-header").each ->
                 $(this).removeClass "expandable-content_is-expanded"
               $(this).addClass "expandable-content_is-expanded"
-
-        APP.fitText.init()
-        APP.evenGrid.init()
+        resizeText()
 
 APP.common.init()
