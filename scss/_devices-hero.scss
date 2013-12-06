@@ -11,6 +11,7 @@
   width: 93em;
   height: 40em;
   left: 50%;
+  top: -15em;
 
   @include sb-media( $bp-layout-medium ) {
     width: 93em;
@@ -29,11 +30,6 @@
 }
 
 //** SVG Styling **//
-
-// .devices-hero--device {
-//   -webkit-transform: translate(0);
-//   transform: translate(0);
-// }
 
 $c-svg-color: #71CEDF;
 
