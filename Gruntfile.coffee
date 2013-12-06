@@ -99,6 +99,16 @@ module.exports = (grunt) ->
           data: "data/work/*.yml"
         src: "partials/work.hbs"
         dest: "dist/work.html"
+      foundry_header:
+        options:
+          data: "data/foundry/*.yml"
+        src: "partials/foundry-header.hbs"
+        dest: "../foundry/forgeIt/expressionengine/templates/default_site/includes.group/foundry-header.html"
+      foundry_footer:
+        options:
+          data: "data/foundry/*.yml"
+        src: "partials/foundry-footer.hbs"
+        dest: "../foundry/forgeIt/expressionengine/templates/default_site/includes.group/foundry-footer.html"
 
     concat:
       js:
@@ -186,7 +196,7 @@ module.exports = (grunt) ->
     plato:
       complexity:
         files:
-          'reports/js-complexity': ['dist/**/*.js']
+          'reports/js-complexity': ['js/app.js']
 
     symlink:
       explicit:
