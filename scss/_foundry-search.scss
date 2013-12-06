@@ -1,5 +1,5 @@
 .foundry--search {
-  background: $c-bg-midGray;
+  background: $c-bg-primaryLight;
   padding: 1em 0;
 }
 
@@ -7,40 +7,40 @@
   max-width: 65em;
   margin: 0 auto;
   display: table;
-}
-
-.search--group {
-  display: table-cell;
-  width: 25%;
-}
-
-.search--long-group {
-  width: 50%;
+  width: 100%;
 }
 
 .hidden-label {
   display: none;
 }
 
-.search--select,
 .search--input {
   @extend %font-body;
-  border: 0 none;
+  display: table-cell;
+  border: .125rem solid white;
+  border: 2px solid white;
   font-size: 1.125em;
+  background: white;
+  width: auto;
+  color: $c-bg-lightGray;
   @include appearance(none);
   @include border-radius(0);
-  @include rem(padding,1);
+  @include rem(padding,.75);
   &:focus {
     outline: none;
+    border-color: $c-bg-primaryDark;
   }
 }
 
-.search--select {
-  background: $c-bg-lightGray;
-  color: $c-bg-midGray;
-}
-
-.search--input {
-  background: white;
-  color: $c-bg-lightGray;
+.search--button {
+  @extend %font-primary;
+  display: table-cell;
+  cursor: pointer;
+  width: auto;
+  border: 0 none;
+  background: $c-bg-primary;
+  text-transform: uppercase;
+  font-size: .875em;
+  color: $c-bg-primaryDark;
+  @include rem(padding,1.125);
 }
